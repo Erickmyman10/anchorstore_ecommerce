@@ -1,0 +1,141 @@
+/* ── Tailwind v4 ──────────────────────────────────────────────────────────── */
+@import "tailwindcss";
+
+/* ── Design Tokens (replaces tailwind.config.js theme.extend) ─────────────── */
+@theme {
+  /* Colors */
+  --color-brand-50:  #FFF5EF;
+  --color-brand-100: #FFE8D6;
+  --color-brand-200: #FFC9A8;
+  --color-brand-300: #FFAA7A;
+  --color-brand-400: #FF8C5A;
+  --color-brand-500: #FF6B35;
+  --color-brand-600: #F04D1A;
+  --color-brand-700: #C63C12;
+  --color-brand-800: #9D2F0E;
+  --color-brand-900: #7A250B;
+  --color-cream:     #FFF8F5;
+  --color-surface:   #FFFFFF;
+
+  /* Typography — maps to font-sans utility */
+  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+
+  /* Border radius — maps to rounded-4xl / rounded-5xl */
+  --radius-4xl: 2rem;
+  --radius-5xl: 2.5rem;
+
+  /* Shadows — map to shadow-soft, shadow-card, etc. */
+  --shadow-soft:        0 2px 15px rgba(0, 0, 0, 0.06);
+  --shadow-card:        0 4px 24px rgba(0, 0, 0, 0.07);
+  --shadow-card-hover:  0 12px 40px rgba(0, 0, 0, 0.13);
+  --shadow-brand:       0 4px 20px rgba(255, 107, 53, 0.30);
+  --shadow-brand-lg:    0 8px 30px rgba(255, 107, 53, 0.45);
+
+  /* Animations — map to animate-float / animate-shimmer */
+  --animate-float:   float   4s   ease-in-out infinite;
+  --animate-shimmer: shimmer 1.6s linear     infinite;
+
+  /* Keyframes for the above animations */
+  --keyframes-float: {
+    0%, 100% { transform: translateY(0px);   }
+    50%      { transform: translateY(-14px); }
+  };
+  --keyframes-shimmer: {
+    0%   { background-position: -1000px 0; }
+    100% { background-position:  1000px 0; }
+  };
+}
+
+/* ── Base styles ──────────────────────────────────────────────────────────── */
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-gray-900, #111827);
+    background-color: var(--color-cream);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ── Reusable component classes ───────────────────────────────────────────── */
+@layer components {
+  /* ── Buttons ─────────────────────────────────────────────────────────── */
+  .btn-brand {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: var(--color-brand-500);
+    color: #fff;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    box-shadow: var(--shadow-brand);
+    transition: all 0.2s;
+    cursor: pointer;
+    user-select: none;
+  }
+  .btn-brand:hover  { background-color: var(--color-brand-600); box-shadow: var(--shadow-brand-lg); }
+  .btn-brand:active { transform: scale(0.95); }
+
+  .btn-brand-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 2px solid var(--color-brand-500);
+    color: var(--color-brand-500);
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    transition: all 0.2s;
+    cursor: pointer;
+    user-select: none;
+  }
+  .btn-brand-outline:hover  { background-color: var(--color-brand-500); color: #fff; }
+  .btn-brand-outline:active { transform: scale(0.95); }
+
+  .btn-white {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: #fff;
+    color: var(--color-brand-500);
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    transition: all 0.2s;
+    cursor: pointer;
+    user-select: none;
+  }
+  .btn-white:hover  { background-color: var(--color-brand-50); }
+  .btn-white:active { transform: scale(0.95); }
+
+  /* ── Section headings ────────────────────────────────────────────────── */
+  .section-heading {
+    @apply text-3xl font-extrabold tracking-tight;
+    color: var(--color-gray-900, #111827);
+  }
+  .section-sub { @apply text-base text-gray-500 mt-1.5; }
+
+  /* ── Skeleton shimmer ────────────────────────────────────────────────── */
+  .skeleton {
+    background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+    background-size: 1000px 100%;
+    animation: var(--animate-shimmer);
+  }
+}
+
+/* ── Swiper overrides ─────────────────────────────────────────────────────── */
+.hero-swiper .swiper-pagination              { bottom: 24px !important; }
+.hero-swiper .swiper-pagination-bullet       { width: 8px; height: 8px; background: rgba(255,255,255,0.7); opacity: 1; transition: all 0.3s; }
+.hero-swiper .swiper-pagination-bullet-active{ width: 28px; border-radius: 9999px; background: #fff; }
+.hero-swiper .swiper-button-next,
+.hero-swiper .swiper-button-prev             { width: 44px; height: 44px; background: rgba(255,255,255,0.2); border-radius: 50%; backdrop-filter: blur(6px); color: #fff; transition: background 0.2s; }
+.hero-swiper .swiper-button-next:hover,
+.hero-swiper .swiper-button-prev:hover       { background: rgba(255,255,255,0.35); }
+.hero-swiper .swiper-button-next::after,
+.hero-swiper .swiper-button-prev::after      { font-size: 13px !important; font-weight: 900; }

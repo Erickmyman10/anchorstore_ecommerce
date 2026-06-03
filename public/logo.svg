@@ -1,0 +1,27 @@
+<svg width="100%" viewBox="0 0 500 120" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Anchorstore logo</title>
+  <desc>Anchorstore logo with blue rounded square icon and dark text</desc>
+
+  <defs>
+    <clipPath id="iconClip">
+      <rect x="0" y="0" width="90" height="90" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <!-- Blue rounded square background -->
+  <rect x="0" y="15" width="90" height="90" rx="14" fill="#2196C9"/>
+
+  <!-- Letter A shape -->
+  <g clip-path="url(#iconClip)" transform="translate(0,15)">
+    <polygon points="16,72 30,72 45,28 38,22" fill="white"/>
+    <polygon points="74,72 60,72 45,28 52,22" fill="white"/>
+    <polygon points="30,52 60,52 57,43 33,43" fill="white"/>
+    <polygon points="45,26 39,44 51,44" fill="#2196C9"/>
+  </g>
+
+  <!-- Divider line -->
+  <line x1="108" y1="18" x2="108" y2="102" stroke="#CCCCCC" stroke-width="1.2"/>
+
+  <!-- ANCHORSTORE text -->
+  <text x="124" y="62" font-family="'Arial Black', 'Franklin Gothic Medium', Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="4" fill="#2D3748">ANCHORSTORE</text>
+</svg>
