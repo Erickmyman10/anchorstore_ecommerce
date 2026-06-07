@@ -16,9 +16,10 @@ export const toPsychPrice = (naira) => {
 
 // Maps FakeStore category strings onto our unified category system.
 const CATEGORY_MAP = {
-  "jewelery":         "accessories",
+  "jewelery":         "fashion",     // no standalone accessories category
   "men's clothing":   "fashion",
   "women's clothing": "fashion",
+  "electronics":      "electronics",
 };
 
 // Converts a raw FakeStore product (USD price + FakeStore category) to our

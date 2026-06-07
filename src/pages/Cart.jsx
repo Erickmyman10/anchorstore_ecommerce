@@ -6,7 +6,6 @@ import CartItem from '../components/CartItem';
 
 const fmt = (n) => `₦${Math.round(n).toLocaleString('en-NG')}`;
 
-// ── Empty state ────────────────────────────────────────────────────────────
 const EmptyCart = () => (
   <motion.div
     initial={{ opacity: 0, y: 24 }}
@@ -33,20 +32,17 @@ const EmptyCart = () => (
   </motion.div>
 );
 
-// ── Cart page ──────────────────────────────────────────────────────────────
 const Cart = () => {
   const { cartItems, clearCart } = useCartStore();
   const cartTotal = useCartStore(selectCartTotal);
 
   if (cartItems.length === 0) return <EmptyCart />;
 
-  // item.price is already in ₦ — cartTotal is the raw ₦ sum
   const totalNaira    = cartTotal;
   const shippingNaira = totalNaira >= 50_000 ? 0 : 3_500;
   const taxNaira      = totalNaira * 0.075;
   const grandTotal    = totalNaira + shippingNaira + taxNaira;
 
-  // Savings across all cart items
   const savingsNaira = cartItems.reduce((sum, item) => {
     const pct      = [15, 20, 25, 30, 35][item.id % 5];
     const oldNaira = item.price / (1 - pct / 100);
@@ -58,7 +54,6 @@ const Cart = () => {
   return (
     <>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pb-32 lg:pb-8">
-        {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-2xl font-extrabold text-gray-900">
             Shopping Cart
@@ -75,7 +70,6 @@ const Cart = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8">
-          {/* ── Item list ── */}
           <div className="flex-1 space-y-3">
             <AnimatePresence>
               {cartItems.map((item) => (
@@ -91,7 +85,6 @@ const Cart = () => {
               ))}
             </AnimatePresence>
 
-            {/* Savings callout */}
             {savingsNaira > 0 && (
               <motion.div
                 initial={{ opacity: 0 }}
@@ -106,7 +99,6 @@ const Cart = () => {
             )}
           </div>
 
-          {/* ── Order Summary (desktop sidebar) ── */}
           <div className="hidden lg:block w-96 shrink-0">
             <OrderSummary
               totalNaira={totalNaira}
@@ -118,7 +110,7 @@ const Cart = () => {
         </div>
       </div>
 
-      {/* ── Mobile sticky checkout bar ── */}
+      {/* Mobile sticky checkout bar */}
       <div className="fixed bottom-0 inset-x-0 lg:hidden z-40 bg-white/95 backdrop-blur-md border-t border-gray-100 px-4 py-3 shadow-2xl">
         <div className="flex items-center justify-between mb-2.5">
           <div>
@@ -142,56 +134,51 @@ const Cart = () => {
   );
 };
 
-// ── Shared summary panel ───────────────────────────────────────────────────
-const OrderSummary = ({ totalNaira, shippingNaira, taxNaira, grandTotal }) => {
-  const fmt = (n) => `₦${Math.round(n).toLocaleString('en-NG')}`;
+const OrderSummary = ({ totalNaira, shippingNaira, taxNaira, grandTotal }) => (
+  <div className="bg-white rounded-2xl border border-gray-100 shadow-card p-6 sticky top-24">
+    <h2 className="text-lg font-extrabold text-gray-900 mb-5">Order Summary</h2>
 
-  return (
-    <div className="bg-white rounded-2xl border border-gray-100 shadow-card p-6 sticky top-24">
-      <h2 className="text-lg font-extrabold text-gray-900 mb-5">Order Summary</h2>
-
-      <div className="space-y-3 text-sm mb-5">
-        <div className="flex justify-between text-gray-600">
-          <span>Subtotal</span>
-          <span className="font-semibold text-gray-900">{fmt(totalNaira)}</span>
-        </div>
-        <div className="flex justify-between text-gray-600">
-          <span>Shipping</span>
-          <span className={`font-semibold ${shippingNaira === 0 ? 'text-green-600' : 'text-gray-900'}`}>
-            {shippingNaira === 0 ? '🎉 Free' : fmt(shippingNaira)}
-          </span>
-        </div>
-        <div className="flex justify-between text-gray-600">
-          <span>VAT (7.5%)</span>
-          <span className="font-semibold text-gray-900">{fmt(taxNaira)}</span>
-        </div>
-
-        {shippingNaira > 0 && (
-          <p className="text-xs text-brand-500 font-semibold flex items-center gap-1 pt-1">
-            <Truck className="w-3.5 h-3.5" />
-            Add {fmt(50000 - totalNaira)} more for free shipping
-          </p>
-        )}
-
-        <div className="border-t border-gray-100 pt-3 flex justify-between font-extrabold text-gray-900 text-base">
-          <span>Total</span>
-          <span>{fmt(grandTotal)}</span>
-        </div>
+    <div className="space-y-3 text-sm mb-5">
+      <div className="flex justify-between text-gray-600">
+        <span>Subtotal</span>
+        <span className="font-semibold text-gray-900">{fmt(totalNaira)}</span>
+      </div>
+      <div className="flex justify-between text-gray-600">
+        <span>Shipping</span>
+        <span className={`font-semibold ${shippingNaira === 0 ? 'text-green-600' : 'text-gray-900'}`}>
+          {shippingNaira === 0 ? '🎉 Free' : fmt(shippingNaira)}
+        </span>
+      </div>
+      <div className="flex justify-between text-gray-600">
+        <span>VAT (7.5%)</span>
+        <span className="font-semibold text-gray-900">{fmt(taxNaira)}</span>
       </div>
 
-      <Link
-        to="/checkout"
-        className="w-full flex items-center justify-center gap-2 bg-brand-500 text-white py-4 rounded-xl font-bold text-base hover:bg-brand-600 active:scale-95 transition-all duration-200 shadow-brand"
-      >
-        Proceed to Checkout <ArrowRight className="w-4 h-4" />
-      </Link>
+      {shippingNaira > 0 && (
+        <p className="text-xs text-brand-500 font-semibold flex items-center gap-1 pt-1">
+          <Truck className="w-3.5 h-3.5" />
+          Add {fmt(50000 - totalNaira)} more for free shipping
+        </p>
+      )}
 
-      <div className="flex items-center justify-center gap-1.5 mt-4 text-xs text-gray-400 font-medium">
-        <Lock className="w-3 h-3" />
-        Secure checkout — SSL encrypted
+      <div className="border-t border-gray-100 pt-3 flex justify-between font-extrabold text-gray-900 text-base">
+        <span>Total</span>
+        <span>{fmt(grandTotal)}</span>
       </div>
     </div>
-  );
-};
+
+    <Link
+      to="/checkout"
+      className="w-full flex items-center justify-center gap-2 bg-brand-500 text-white py-4 rounded-xl font-bold text-base hover:bg-brand-600 active:scale-95 transition-all duration-200 shadow-brand"
+    >
+      Proceed to Checkout <ArrowRight className="w-4 h-4" />
+    </Link>
+
+    <div className="flex items-center justify-center gap-1.5 mt-4 text-xs text-gray-400 font-medium">
+      <Lock className="w-3 h-3" />
+      Secure checkout — SSL encrypted
+    </div>
+  </div>
+);
 
 export default Cart;

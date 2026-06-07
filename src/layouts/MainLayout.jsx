@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const MainLayout = () => (
-  <div className="flex flex-col min-h-screen bg-gray-50">
+  <div className="flex flex-col min-h-screen bg-gray-50 ">
     <Navbar />
     <main className="flex-grow">
       <Outlet />

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ShoppingCart, Star, Heart, Flame } from 'lucide-react';
@@ -32,12 +32,24 @@ const StarRating = ({ rate, count }) => {
 
 // ── ProductCard ────────────────────────────────────────────────────────────
 const ProductCard = ({ product }) => {
-  const [wishlisted, setWishlisted] = useState(false);
-  const [justAdded,  setJustAdded]  = useState(false);
+  const [wishlisted,   setWishlisted]   = useState(false);
+  const [justAdded,    setJustAdded]    = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovered,    setIsHovered]    = useState(false);
   const addToCart = useCartStore((state) => state.addToCart);
 
-  const title    = product.title || product.name;
-  const image    = product.image ?? null;
+  const title  = product.title || product.name;
+  // Build image array: filter out nulls; fall back to product.image for API products
+  const images = (
+    product.images?.filter(Boolean).length
+      ? product.images.filter(Boolean)
+      : product.image
+        ? [product.image]
+        : []
+  );
+  const frontImg = images[0] ?? null;
+  const image    = frontImg; // kept for cart compat
+
   const price    = product.price;
   const category = product.category;
   const ratingVal =
@@ -47,16 +59,23 @@ const ProductCard = ({ product }) => {
   const reviewCount =
     typeof product.rating === 'object' ? product.rating?.count : null;
 
-  // ~75% of products show a discount (deterministic, not every card looks the same)
-  const hasDiscount  = product.id % 4 !== 0;
-  const discountPct  = hasDiscount ? [15, 20, 25, 30, 35][product.id % 5] : 0;
-  const oldPrice     = hasDiscount ? price / (1 - discountPct / 100) : price;
-  const isHotDeal    = discountPct >= 25;
+  const hasDiscount = product.id % 4 !== 0;
+  const discountPct = hasDiscount ? [15, 20, 25, 30, 35][product.id % 5] : 0;
+  const oldPrice    = hasDiscount ? price / (1 - discountPct / 100) : price;
+  const isHotDeal   = discountPct >= 25;
 
-  // price is already in ₦ — no conversion needed
-  const psychNaira    = toPsychPrice(Math.round(price));
-  const rawOldNaira   = Math.round(oldPrice);
-  const savedNaira    = hasDiscount ? rawOldNaira - Math.round(price) : 0;
+  const psychNaira  = toPsychPrice(Math.round(price));
+  const rawOldNaira = Math.round(oldPrice);
+  const savedNaira  = hasDiscount ? rawOldNaira - Math.round(price) : 0;
+
+  // ── Auto-slide — pauses while hovered ─────────────────────────────────
+  useEffect(() => {
+    if (isHovered || images.length < 2) return;
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [isHovered, images.length]);
 
   const handleAddToCart = (e) => {
     e.preventDefault();
@@ -72,16 +91,54 @@ const ProductCard = ({ product }) => {
       className="group bg-white rounded-2xl shadow-card hover:shadow-card-hover transition-shadow duration-300 overflow-hidden flex flex-col"
     >
       <Link to={`/product/${product.id}`} className="flex-1 flex flex-col">
-        {/* ── Image ── */}
+        {/* ── Image area ── */}
         <div className="relative aspect-square bg-gray-50 overflow-hidden">
-          {image ? (
-            <img
-              src={image}
-              alt={title}
-              loading="lazy"
-              decoding="async"
-              className="w-full h-full object-contain p-5 group-hover:scale-108 transition-transform duration-500"
-            />
+
+          {frontImg ? (
+            images.length >= 2 ? (
+              /* ── Multi-image auto-slider ── */
+              <div
+                className="relative w-full h-full"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                {images.map((src, i) => (
+                  <img
+                    key={i}
+                    src={src}
+                    alt={i === 0 ? title : `${title} — view ${i + 1}`}
+                    loading="lazy"
+                    decoding="async"
+                    className={`absolute inset-0 w-full h-full object-contain p-5 transition-opacity duration-700 ${
+                      i === currentIndex ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  />
+                ))}
+
+                {/* Slide dots */}
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1 z-10">
+                  {images.map((_, i) => (
+                    <div
+                      key={i}
+                      className={`h-1 rounded-full transition-all duration-300 ${
+                        i === currentIndex
+                          ? 'w-4 bg-brand-500 opacity-90'
+                          : 'w-1 bg-gray-400 opacity-50'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+            ) : (
+              /* ── Single image — scale on hover ── */
+              <img
+                src={frontImg}
+                alt={title}
+                loading="lazy"
+                decoding="async"
+                className="absolute inset-0 w-full h-full object-contain p-5 group-hover:scale-108 transition-transform duration-500"
+              />
+            )
           ) : (
             <div className="w-full h-full flex items-center justify-center">
               <ShoppingCart className="w-12 h-12 text-gray-200" />
@@ -92,7 +149,7 @@ const ProductCard = ({ product }) => {
           <button
             onClick={(e) => { e.preventDefault(); setWishlisted(!wishlisted); }}
             aria-label="Wishlist"
-            className="absolute top-3 right-3 p-2 rounded-full bg-white/90 backdrop-blur-sm shadow-soft opacity-0 group-hover:opacity-100 transition-all duration-200 hover:scale-110 active:scale-95"
+            className="absolute top-3 right-3 p-2 rounded-full bg-white/90 backdrop-blur-sm shadow-soft opacity-0 group-hover:opacity-100 transition-all duration-200 hover:scale-110 active:scale-95 z-20"
           >
             <Heart
               className={`w-4 h-4 transition-colors duration-200 ${
@@ -101,9 +158,9 @@ const ProductCard = ({ product }) => {
             />
           </button>
 
-          {/* Badges — only when discounted */}
+          {/* Badges */}
           {hasDiscount && (
-            <div className="absolute top-3 left-3 flex flex-col gap-1.5">
+            <div className="absolute top-3 left-3 flex flex-col gap-1.5 z-20">
               {isHotDeal && (
                 <span className="flex items-center gap-1 px-2 py-0.5 bg-amber-500 text-white text-[10px] font-extrabold rounded-full shadow-sm">
                   <Flame className="w-2.5 h-2.5" />

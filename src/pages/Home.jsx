@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,7 +19,7 @@ import "swiper/css/pagination";
 
 import ProductCard from "../components/ProductCard";
 import { getMergedProducts } from "../services/api";
-import { categoryImages, bannerImages } from "../utils/imageMap";
+import { categoryImages, bannerImages, hotPicksBanner } from "../utils/imageMap";
 
 // ── Animation variants ─────────────────────────────────────────────────────
 const fadeUp = {
@@ -33,7 +33,7 @@ const fadeUp = {
 
 const stagger = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.1 } },
+  visible: { transition: { staggerChildren: 0.08 } },
 };
 
 const cardAnim = {
@@ -41,7 +41,74 @@ const cardAnim = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
-// ── Static data ────────────────────────────────────────────────────────────
+// ── Category config (label, icon, gradient — mirrors Category.jsx) ────────
+const CATEGORY_CONFIG = {
+  "official-store": {
+    label: "Official Store",
+    icon: "",
+    gradient: "from-violet-600 to-indigo-700",
+  },
+  "phones-tablets": {
+    label: "Phones & Tablets",
+    icon: "",
+    gradient: "from-sky-500 to-blue-700",
+  },
+  computing: {
+    label: "Computing",
+    icon: "",
+    gradient: "from-indigo-500 to-purple-700",
+  },
+  electronics: {
+    label: "Electronics",
+    icon: "",
+    gradient: "from-slate-600 to-gray-800",
+  },
+  appliances: {
+    label: "Appliances",
+    icon: "",
+    gradient: "from-teal-500 to-emerald-700",
+  },
+  fashion: {
+    label: "Fashion",
+    icon: "",
+    gradient: "from-brand-500 to-pink-500",
+  },
+  "health-beauty": {
+    label: "Health & Beauty",
+    icon: "",
+    gradient: "from-rose-400 to-pink-600",
+  },
+  "home-office": {
+    label: "Home & Office",
+    icon: "",
+    gradient: "from-amber-500 to-orange-600",
+  },
+  supermarket: {
+    label: "Supermarket",
+    icon: "",
+    gradient: "from-green-500 to-emerald-600",
+  },
+  gaming: { label: "Gaming", icon: "", gradient: "from-red-500 to-rose-700" },
+  "baby-products": {
+    label: "Baby Products",
+    icon: "",
+    gradient: "from-pink-300 to-purple-400",
+  },
+};
+
+// Featured categories shown on the homepage (first 8 in desired order)
+const FEATURED_CATEGORY_KEYS = [
+  "official-store",
+  "phones-tablets",
+  "computing",
+  "electronics",
+  "appliances",
+  "fashion",
+  "health-beauty",
+  "home-office",
+];
+
+// ── Hero slides ────────────────────────────────────────────────────────────
 const heroSlides = [
   {
     id: 1,
@@ -50,6 +117,7 @@ const heroSlides = [
     headlineAccent: "Speaks Louder",
     sub: "Explore premium fashion collections curated just for you.",
     cta: "Explore Fashion",
+    ctaLink: "/categories?category=fashion",
     bg: "from-orange-500 via-red-500 to-pink-600",
     accentColor: "#fed7aa",
     image: bannerImages[0],
@@ -61,39 +129,14 @@ const heroSlides = [
     headlineAccent: "For Every Need",
     sub: "Discover cutting-edge electronics at the best prices in Nigeria.",
     cta: "Shop Electronics",
+    ctaLink: "/categories?category=electronics",
     bg: "from-indigo-900 via-purple-900 to-violet-900",
     accentColor: "#a5b4fc",
     image: bannerImages[1],
   },
 ];
 
-const categoryCards = [
-  {
-    id: "electronics",
-    name: "Electronics",
-    count: "120+ Products",
-    gradient: "from-indigo-500 to-purple-600",
-    // icon: '🖥️',
-    image: categoryImages.electronics,
-  },
-  {
-    id: "fashion",
-    name: "Fashion",
-    count: "200+ Styles",
-    gradient: "from-brand-500 to-pink-500",
-    // icon: '👗',
-    image: categoryImages.fashion,
-  },
-  {
-    id: "accessories",
-    name: "Accessories",
-    count: "80+ Pieces",
-    gradient: "from-amber-500 to-orange-600",
-    // icon: '⌚',
-    image: categoryImages.accessories,
-  },
-];
-
+// ── Trust features ─────────────────────────────────────────────────────────
 const trustFeatures = [
   { icon: Truck, title: "Free Shipping", desc: "On orders over ₦50,000" },
   { icon: RotateCcw, title: "Easy Returns", desc: "30-day return policy" },
@@ -116,28 +159,52 @@ const ProductSkeleton = () => (
 
 // ── Home page ──────────────────────────────────────────────────────────────
 const Home = () => {
-  const [products, setProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     getMergedProducts(8)
       .then((data) => {
-        setProducts(data);
+        setAllProducts(data);
         setLoading(false);
       })
       .catch(() => setLoading(false));
   }, []);
 
-  const filteredProducts = searchQuery.trim()
-    ? products.filter((p) =>
-        p.title.toLowerCase().includes(searchQuery.toLowerCase()),
-      )
-    : products;
+  // Featured products: marked featured:true first, then fill up to 16
+  const featuredProducts = useMemo(() => {
+    const marked = allProducts.filter((p) => p.featured);
+    if (marked.length >= 8) return marked.slice(0, 16);
+    const rest = allProducts.filter((p) => !p.featured);
+    return [...marked, ...rest].slice(0, 16);
+  }, [allProducts]);
+
+  const filteredProducts = useMemo(
+    () =>
+      searchQuery.trim()
+        ? allProducts.filter((p) =>
+            (p.title || p.name)
+              .toLowerCase()
+              .includes(searchQuery.toLowerCase()),
+          )
+        : featuredProducts,
+    [allProducts, featuredProducts, searchQuery],
+  );
+
+  // Per-category product counts for the category cards
+  const categoryCounts = useMemo(() => {
+    const counts = {};
+    allProducts.forEach((p) => {
+      const cat = p.category?.toLowerCase();
+      if (cat) counts[cat] = (counts[cat] || 0) + 1;
+    });
+    return counts;
+  }, [allProducts]);
 
   return (
     <div>
-      {/* ── Hero Swiper ─────────────────────────────────────────────────── */}
+      {/* ── Hero Swiper ─────────────────────────────────────────────── */}
       <section>
         <Swiper
           modules={[Autoplay, Navigation, Pagination]}
@@ -150,11 +217,10 @@ const Home = () => {
           {heroSlides.map((slide) => (
             <SwiperSlide key={slide.id}>
               <div
-                className={`relative min-h-[520px] lg:min-h-[600px] flex items-center overflow-hidden ${
-                  slide.image ? "" : `bg-gradient-to-br ${slide.bg}`
+                className={`relative min-h-130 lg:min-h-150 flex items-center overflow-hidden ${
+                  slide.image ? "" : `bg-linear-to-br ${slide.bg}`
                 }`}
               >
-                {/* Banner image + light overlay (when image exists) */}
                 {slide.image && (
                   <>
                     <img
@@ -169,17 +235,14 @@ const Home = () => {
 
                 {/* Decorative circles */}
                 <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-white/10" />
-                <div className="absolute bottom-[-60px] right-[18%] w-56 h-56 rounded-full bg-white/5" />
+                <div className="absolute -bottom-15 right-[18%] w-56 h-56 rounded-full bg-white/5" />
                 <div className="absolute top-[35%] right-[8%] w-28 h-28 rounded-full bg-white/5" />
 
                 <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 w-full">
                   <div className="max-w-xl">
-                    {/* Tag */}
                     <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 text-white text-sm font-semibold mb-6 backdrop-blur-sm">
                       {slide.tag}
                     </span>
-
-                    {/* Headline */}
                     <h1 className="text-5xl lg:text-[4.5rem] font-extrabold text-white leading-[1.08] mb-5 tracking-tight">
                       {slide.headline}
                       <br />
@@ -187,15 +250,11 @@ const Home = () => {
                         {slide.headlineAccent}
                       </span>
                     </h1>
-
-                    {/* Sub */}
                     <p className="text-white/75 text-lg mb-9 leading-relaxed max-w-md">
                       {slide.sub}
                     </p>
-
-                    {/* CTAs */}
                     <div className="flex flex-wrap gap-3">
-                      <Link to="/categories" className="btn-white">
+                      <Link to={slide.ctaLink} className="btn-white">
                         {slide.cta}
                         <ArrowRight className="w-4 h-4" />
                       </Link>
@@ -207,11 +266,6 @@ const Home = () => {
                       </Link>
                     </div>
                   </div>
-
-                  {/* Big floating emoji decoration */}
-                  <div className="absolute right-8 lg:right-24 top-1/2 -translate-y-1/2 text-[130px] lg:text-[180px] opacity-20 select-none hidden md:block animate-float pointer-events-none">
-                    {slide.icon}
-                  </div>
                 </div>
               </div>
             </SwiperSlide>
@@ -219,7 +273,7 @@ const Home = () => {
         </Swiper>
       </section>
 
-      {/* ── Trust / Features Bar ────────────────────────────────────────── */}
+      {/* ── Trust / Features Bar ────────────────────────────────────── */}
       <section className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -232,7 +286,7 @@ const Home = () => {
                 transition={{ delay: i * 0.08, duration: 0.45 }}
                 className="flex items-center gap-3"
               >
-                <div className="p-2.5 bg-brand-50 rounded-xl flex-shrink-0">
+                <div className="p-2.5 bg-brand-50 rounded-xl shrink-0">
                   <f.icon className="w-5 h-5 text-brand-500" />
                 </div>
                 <div>
@@ -247,7 +301,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── Categories ──────────────────────────────────────────────────── */}
+      {/* ── Shop by Category ────────────────────────────────────────── */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -264,67 +318,77 @@ const Home = () => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.15 }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={stagger}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6"
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"
           >
-            {categoryCards.map((cat) => (
-              <motion.div key={cat.id} variants={cardAnim}>
-                <Link
-                  to={`/categories?category=${cat.id}`}
-                  className="block group"
-                >
-                  <div
-                    className={`relative rounded-3xl p-8 overflow-hidden aspect-[4/3] flex flex-col justify-end group-hover:scale-[1.02] transition-transform duration-300 ${
-                      cat.image
-                        ? "bg-gray-900"
-                        : `bg-gradient-to-br ${cat.gradient}`
-                    }`}
+            {FEATURED_CATEGORY_KEYS.map((catKey) => {
+              const { label, icon, gradient } = CATEGORY_CONFIG[catKey];
+              const image = categoryImages[catKey] ?? null;
+              const count = categoryCounts[catKey];
+              return (
+                <motion.div key={catKey} variants={cardAnim}>
+                  <Link
+                    to={`/categories?category=${catKey}`}
+                    className="block group"
                   >
-                    {/* Category image + color tint overlay */}
-                    {cat.image && (
-                      <>
-                        <img
-                          src={cat.image}
-                          alt={cat.name}
-                          className="absolute inset-0 w-full h-full object-cover"
-                        />
-                        <div className="absolute inset-0 bg-black/30" />
-                      </>
-                    )}
+                    <div
+                      className={`relative rounded-2xl p-6 overflow-hidden aspect-4/3 flex flex-col justify-end group-hover:scale-[1.02] transition-transform duration-300 ${
+                        image ? "bg-gray-900" : `bg-linear-to-br ${gradient}`
+                      }`}
+                    >
+                      {image && (
+                        <>
+                          <img
+                            src={image}
+                            alt={label}
+                            className="absolute inset-0 w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-black/35" />
+                        </>
+                      )}
 
-                    {/* Decorative circles inside card */}
-                    <div className="absolute -top-8 -right-8 w-36 h-36 bg-white/10 rounded-full" />
-                    <div className="absolute top-1/2 right-4 w-20 h-20 bg-white/5 rounded-full" />
+                      {/* Decorative circles */}
+                      <div className="absolute -top-6 -right-6 w-28 h-28 bg-white/10 rounded-full" />
+                      <div className="absolute top-1/2 right-3 w-14 h-14 bg-white/5 rounded-full" />
 
-                    {/* Big icon */}
-                    <span className="absolute top-5 right-5 text-6xl opacity-25 group-hover:opacity-40 transition-opacity duration-300 select-none">
-                      {cat.icon}
-                    </span>
+                      {/* Bottom gradient overlay */}
+                      <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent rounded-2xl" />
 
-                    {/* Dark-to-transparent bottom overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent rounded-3xl" />
-
-                    <div className="relative">
-                      <p className="text-white/70 text-sm font-semibold">
-                        {cat.count}
-                      </p>
-                      <h3 className="text-white text-2xl font-extrabold mt-0.5">
-                        {cat.name}
-                      </h3>
-                      <span className="inline-flex items-center gap-1 text-white/90 text-sm font-bold mt-2 group-hover:gap-2 transition-all duration-200">
-                        Shop Now <ChevronRight className="w-4 h-4" />
-                      </span>
+                      <div className="relative">
+                        <span className="text-3xl mb-2 block">{icon}</span>
+                        {!loading && count != null && (
+                          <p className="text-white/70 text-xs font-semibold mb-0.5">
+                            {count}+ Products
+                          </p>
+                        )}
+                        <h3 className="text-white text-base font-extrabold leading-tight">
+                          {label}
+                        </h3>
+                        <span className="inline-flex items-center gap-1 text-white/80 text-xs font-bold mt-1.5 group-hover:gap-2 transition-all duration-200">
+                          Shop Now <ChevronRight className="w-3.5 h-3.5" />
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
+                  </Link>
+                </motion.div>
+              );
+            })}
           </motion.div>
+
+          {/* Show all categories link */}
+          <div className="mt-8 text-center">
+            <Link
+              to="/categories"
+              className="inline-flex items-center gap-2 text-brand-500 font-extrabold text-sm hover:gap-3 transition-all duration-200"
+            >
+              Browse all 11 categories <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* ── Featured Products ────────────────────────────────────────────── */}
+      {/* ── Featured Products ────────────────────────────────────────── */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -346,7 +410,7 @@ const Home = () => {
             </Link>
           </motion.div>
 
-          {/* ── Search bar ── */}
+          {/* Search bar */}
           <div className="relative mb-8">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
             <input
@@ -367,7 +431,6 @@ const Home = () => {
             )}
           </div>
 
-          {/* Result count when searching */}
           {searchQuery.trim() && !loading && (
             <p className="text-sm text-gray-500 font-medium mb-5">
               {filteredProducts.length === 0
@@ -411,7 +474,6 @@ const Home = () => {
             )}
           </motion.div>
 
-          {/* Mobile "View All" CTA */}
           <div className="sm:hidden mt-8 text-center">
             <Link to="/categories" className="btn-brand-outline">
               View All Products
@@ -421,7 +483,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── Promo Banner ────────────────────────────────────────────────── */}
+      {/* ── Promo Banner ─────────────────────────────────────────────── */}
       <motion.section
         initial="hidden"
         whileInView="visible"
@@ -430,13 +492,16 @@ const Home = () => {
         className="py-16"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative bg-gradient-to-r from-brand-500 via-brand-600 to-pink-500 rounded-4xl overflow-hidden text-white text-center px-8 py-14 lg:py-20">
-            {/* Decorative blobs */}
-            <div className="absolute -top-20 -left-20 w-72 h-72 bg-white/10 rounded-full" />
-            <div className="absolute -bottom-16 -right-16 w-80 h-80 bg-white/10 rounded-full" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/5 rounded-full" />
-
-            <div className="relative">
+          <div
+            className="relative rounded-4xl overflow-hidden text-white text-center px-8 py-14 lg:py-20"
+            style={{
+              backgroundImage: `url(${hotPicksBanner})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <div className="absolute inset-0 bg-black/50" />
+            <div className="relative z-10">
               <span className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-bold mb-5">
                 🎉 Limited Time Offer
               </span>
