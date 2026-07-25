@@ -6,7 +6,11 @@
   "type": "module",
   "scripts": {
     "start": "node app.js",
+    "build": "npx prisma generate",
     "dev": "nodemon app.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "keywords": [],
   "author": "",
