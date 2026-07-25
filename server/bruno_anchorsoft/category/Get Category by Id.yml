@@ -1,0 +1,15 @@
+info:
+  name: Get Category by Id
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{baseUrl}}/api/categories/cmqi4lfvq0000zupmgf6q6wqt"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

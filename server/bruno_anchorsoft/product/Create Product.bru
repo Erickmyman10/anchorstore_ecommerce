@@ -1,0 +1,19 @@
+meta {
+  name: Create Product
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:5000/api/products
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Samsung TV",
+    "unitPrice": 250000,
+    "categoryId": "cmqgg3spx0000viznx5qlnzbw"
+  }
+}

@@ -1,0 +1,165 @@
+- generic [ref=e47]:
+  - generic [ref=e48]:
+    - navigation [ref=e49]:
+      - generic [ref=e51]:
+        - link "AnchorStore" [ref=e52] [cursor=pointer]:
+          - /url: /
+          - img "AnchorStore" [ref=e53]
+        - generic [ref=e54]:
+          - link "Home" [ref=e55] [cursor=pointer]:
+            - /url: /
+          - link "Categories" [ref=e56] [cursor=pointer]:
+            - /url: /categories
+          - link "Cart" [ref=e57] [cursor=pointer]:
+            - /url: /cart
+        - generic [ref=e58]:
+          - button "Search" [ref=e59]:
+            - img [ref=e60]
+          - link "Cart" [ref=e63] [cursor=pointer]:
+            - /url: /cart
+            - img [ref=e64]
+          - link "Sign in" [ref=e68] [cursor=pointer]:
+            - /url: /login
+            - img [ref=e69]
+            - generic [ref=e72]: My Account
+    - main [ref=e1]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - link "AnchorStore" [ref=e6] [cursor=pointer]:
+            - /url: /
+            - img "AnchorStore" [ref=e7]
+          - heading "Create your account" [level=1] [ref=e8]
+          - paragraph [ref=e9]: Join us for a better shopping experience
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - generic [ref=e12]:
+              - generic [ref=e13]:
+                - generic [ref=e14]: First Name
+                - textbox "e.g. Michael" [ref=e15]: PlayTest
+              - generic [ref=e16]:
+                - generic [ref=e17]: Last Name
+                - textbox "e.g. Adeyemi" [ref=e18]: User
+            - generic [ref=e19]:
+              - generic [ref=e20]: Email address
+              - textbox "you@example.com" [ref=e21]: playtest@anchortest.com
+            - generic [ref=e22]:
+              - generic [ref=e23]: Password
+              - generic [ref=e24]:
+                - textbox "Min. 8 characters" [ref=e25]: TestPass123!
+                - button [ref=e26]:
+                  - img [ref=e27]
+            - generic [ref=e30]:
+              - generic [ref=e31]: Confirm Password
+              - generic [ref=e32]:
+                - textbox "Re-enter your password" [ref=e33]: TestPass123!
+                - button [ref=e34]:
+                  - img [ref=e35]
+                - img [ref=e164]
+            - generic [ref=e38]:
+              - checkbox [checked] [active] [ref=e39] [cursor=pointer]
+              - generic [ref=e40]:
+                - text: I agree to the
+                - link "Terms of Service" [ref=e41] [cursor=pointer]:
+                  - /url: /signup
+                - text: and
+                - link "Privacy Policy" [ref=e42] [cursor=pointer]:
+                  - /url: /signup
+            - button "Create Account" [ref=e43]
+          - paragraph [ref=e44]:
+            - text: Already have an account?
+            - link "Sign in" [ref=e45] [cursor=pointer]:
+              - /url: /login
+    - contentinfo [ref=e73]:
+      - generic [ref=e74]:
+        - generic [ref=e75]:
+          - generic [ref=e76]:
+            - link "AnchorStore" [ref=e77] [cursor=pointer]:
+              - /url: /
+              - img "AnchorStore" [ref=e79]
+            - paragraph [ref=e80]: Your trusted destination for quality products. We bring the best shopping experience right to your doorstep.
+            - generic [ref=e81]:
+              - generic [ref=e82]:
+                - img [ref=e83]
+                - generic [ref=e86]: support@anchorstore.com
+              - link "09052083623" [ref=e87] [cursor=pointer]:
+                - /url: https://wa.me/2349052083623
+                - img [ref=e88]
+                - generic [ref=e90]: "09052083623"
+              - generic [ref=e91]:
+                - img [ref=e92]
+                - generic [ref=e95]: Lagos, Nigeria
+            - generic [ref=e96]:
+              - link "WhatsApp" [ref=e97] [cursor=pointer]:
+                - /url: https://wa.me/2349052083623
+                - img [ref=e98]
+              - link "Instagram" [ref=e100] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e101]
+              - link "X (Twitter)" [ref=e104] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e105]
+              - link "Facebook" [ref=e107] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e108]
+          - generic [ref=e110]:
+            - heading "Shop" [level=3] [ref=e111]
+            - list [ref=e112]:
+              - listitem [ref=e113]:
+                - link "All Products" [ref=e114] [cursor=pointer]:
+                  - /url: /categories
+              - listitem [ref=e115]:
+                - link "New Arrivals" [ref=e116] [cursor=pointer]:
+                  - /url: /categories
+              - listitem [ref=e117]:
+                - link "Best Sellers" [ref=e118] [cursor=pointer]:
+                  - /url: /categories
+              - listitem [ref=e119]:
+                - link "On Sale" [ref=e120] [cursor=pointer]:
+                  - /url: /categories
+          - generic [ref=e121]:
+            - heading "Support" [level=3] [ref=e122]
+            - list [ref=e123]:
+              - listitem [ref=e124]:
+                - link "Contact Us" [ref=e125] [cursor=pointer]:
+                  - /url: /signup
+              - listitem [ref=e126]:
+                - link "FAQs" [ref=e127] [cursor=pointer]:
+                  - /url: /signup
+              - listitem [ref=e128]:
+                - link "Shipping Info" [ref=e129] [cursor=pointer]:
+                  - /url: /signup
+              - listitem [ref=e130]:
+                - link "Returns" [ref=e131] [cursor=pointer]:
+                  - /url: /signup
+          - generic [ref=e132]:
+            - heading "Company" [level=3] [ref=e133]
+            - list [ref=e134]:
+              - listitem [ref=e135]:
+                - link "About Us" [ref=e136] [cursor=pointer]:
+                  - /url: /signup
+              - listitem [ref=e137]:
+                - link "Careers" [ref=e138] [cursor=pointer]:
+                  - /url: /signup
+              - listitem [ref=e139]:
+                - link "Privacy Policy" [ref=e140] [cursor=pointer]:
+                  - /url: /signup
+              - listitem [ref=e141]:
+                - link "Terms of Service" [ref=e142] [cursor=pointer]:
+                  - /url: /signup
+        - generic [ref=e143]:
+          - paragraph [ref=e144]: © 2026 AnchorStore. All rights reserved.
+          - generic [ref=e145]:
+            - link "WhatsApp" [ref=e146] [cursor=pointer]:
+              - /url: https://wa.me/2349052083623
+              - img [ref=e147]
+            - link "Instagram" [ref=e149] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e150]
+            - link "X (Twitter)" [ref=e153] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e154]
+            - link "Facebook" [ref=e156] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e157]
+  - button "Toggle chat assistant" [ref=e160] [cursor=pointer]:
+    - img [ref=e162]

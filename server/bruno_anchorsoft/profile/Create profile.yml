@@ -1,0 +1,24 @@
+info:
+  name: Create profile
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/profiles"
+  body:
+    type: json
+    data: |-
+      {
+        "fullName": "Samuel Adebayo",
+        "address": "Oshodi, Lagos",
+        "phoneNumber": "08012345678",
+        "userId": "cmqgh5qdr000314g5xkfd19de"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

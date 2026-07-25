@@ -1,0 +1,150 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e6]:
+        - link "AnchorStore" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "AnchorStore" [ref=e8]
+        - generic [ref=e9]:
+          - link "Home" [ref=e10] [cursor=pointer]:
+            - /url: /
+          - link "Categories" [ref=e11] [cursor=pointer]:
+            - /url: /categories
+          - link "Cart" [ref=e12] [cursor=pointer]:
+            - /url: /cart
+        - generic [ref=e13]:
+          - button "Search" [ref=e14]:
+            - img [ref=e15]
+          - link "Cart" [ref=e18] [cursor=pointer]:
+            - /url: /cart
+            - img [ref=e19]
+            - generic [ref=e23]: "2"
+          - link "Sign in" [ref=e228] [cursor=pointer]:
+            - /url: /login
+            - img [ref=e229]
+            - generic [ref=e232]: My Account
+    - main [ref=e30]:
+      - generic [ref=e235]:
+        - generic [ref=e236]:
+          - link "AnchorStore" [ref=e237] [cursor=pointer]:
+            - /url: /
+            - img "AnchorStore" [ref=e238]
+          - heading "Welcome back" [level=1] [ref=e239]
+          - paragraph [ref=e240]: Sign in to continue shopping
+        - generic [ref=e241]:
+          - generic [ref=e242]:
+            - generic [ref=e243]:
+              - generic [ref=e244]: Email address
+              - textbox "you@example.com" [ref=e245]
+            - generic [ref=e246]:
+              - generic [ref=e247]: Password
+              - generic [ref=e248]:
+                - textbox "••••••••" [ref=e249]
+                - button [ref=e250]:
+                  - img [ref=e251]
+            - generic [ref=e254]:
+              - generic [ref=e255] [cursor=pointer]:
+                - checkbox "Remember me" [ref=e256]
+                - generic [ref=e257]: Remember me
+              - link "Forgot password?" [ref=e258] [cursor=pointer]:
+                - /url: /login
+            - button "Sign In" [disabled] [ref=e259]
+          - paragraph [ref=e260]:
+            - text: Don't have an account?
+            - link "Create one" [ref=e261] [cursor=pointer]:
+              - /url: /signup
+    - contentinfo [ref=e70]:
+      - generic [ref=e71]:
+        - generic [ref=e72]:
+          - generic [ref=e73]:
+            - link "AnchorStore" [ref=e74] [cursor=pointer]:
+              - /url: /
+              - img "AnchorStore" [ref=e76]
+            - paragraph [ref=e77]: Your trusted destination for quality products. We bring the best shopping experience right to your doorstep.
+            - generic [ref=e78]:
+              - generic [ref=e79]:
+                - img [ref=e80]
+                - generic [ref=e83]: support@anchorstore.com
+              - link "09052083623" [ref=e84] [cursor=pointer]:
+                - /url: https://wa.me/2349052083623
+                - img [ref=e85]
+                - generic [ref=e87]: "09052083623"
+              - generic [ref=e88]:
+                - img [ref=e89]
+                - generic [ref=e92]: Lagos, Nigeria
+            - generic [ref=e93]:
+              - link "WhatsApp" [ref=e94] [cursor=pointer]:
+                - /url: https://wa.me/2349052083623
+                - img [ref=e95]
+              - link "Instagram" [ref=e97] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e98]
+              - link "X (Twitter)" [ref=e101] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e102]
+              - link "Facebook" [ref=e104] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e105]
+          - generic [ref=e107]:
+            - heading "Shop" [level=3] [ref=e108]
+            - list [ref=e109]:
+              - listitem [ref=e110]:
+                - link "All Products" [ref=e111] [cursor=pointer]:
+                  - /url: /categories
+              - listitem [ref=e112]:
+                - link "New Arrivals" [ref=e113] [cursor=pointer]:
+                  - /url: /categories
+              - listitem [ref=e114]:
+                - link "Best Sellers" [ref=e115] [cursor=pointer]:
+                  - /url: /categories
+              - listitem [ref=e116]:
+                - link "On Sale" [ref=e117] [cursor=pointer]:
+                  - /url: /categories
+          - generic [ref=e118]:
+            - heading "Support" [level=3] [ref=e119]
+            - list [ref=e120]:
+              - listitem [ref=e121]:
+                - link "Contact Us" [ref=e122] [cursor=pointer]:
+                  - /url: /login
+              - listitem [ref=e123]:
+                - link "FAQs" [ref=e124] [cursor=pointer]:
+                  - /url: /login
+              - listitem [ref=e125]:
+                - link "Shipping Info" [ref=e126] [cursor=pointer]:
+                  - /url: /login
+              - listitem [ref=e127]:
+                - link "Returns" [ref=e128] [cursor=pointer]:
+                  - /url: /login
+          - generic [ref=e129]:
+            - heading "Company" [level=3] [ref=e130]
+            - list [ref=e131]:
+              - listitem [ref=e132]:
+                - link "About Us" [ref=e133] [cursor=pointer]:
+                  - /url: /login
+              - listitem [ref=e134]:
+                - link "Careers" [ref=e135] [cursor=pointer]:
+                  - /url: /login
+              - listitem [ref=e136]:
+                - link "Privacy Policy" [ref=e137] [cursor=pointer]:
+                  - /url: /login
+              - listitem [ref=e138]:
+                - link "Terms of Service" [ref=e139] [cursor=pointer]:
+                  - /url: /login
+        - generic [ref=e140]:
+          - paragraph [ref=e141]: © 2026 AnchorStore. All rights reserved.
+          - generic [ref=e142]:
+            - link "WhatsApp" [ref=e143] [cursor=pointer]:
+              - /url: https://wa.me/2349052083623
+              - img [ref=e144]
+            - link "Instagram" [ref=e146] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e147]
+            - link "X (Twitter)" [ref=e150] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e151]
+            - link "Facebook" [ref=e153] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e154]
+  - button "Toggle chat assistant" [ref=e157] [cursor=pointer]:
+    - generic [ref=e158]: "2"
+    - img [ref=e160]

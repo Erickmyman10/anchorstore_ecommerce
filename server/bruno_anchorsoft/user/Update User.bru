@@ -1,0 +1,17 @@
+meta {
+  name: Update User
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:5000/api/users/cmqi532r90002zupm3hxr9wnh
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "avatar": "https://example.com/avatar.png"
+  }
+}

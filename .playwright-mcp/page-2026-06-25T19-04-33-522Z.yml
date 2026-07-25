@@ -1,0 +1,174 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e6]:
+        - link "AnchorStore" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "AnchorStore" [ref=e8]
+        - generic [ref=e9]:
+          - link "Home" [ref=e10] [cursor=pointer]:
+            - /url: /
+          - link "Categories" [ref=e11] [cursor=pointer]:
+            - /url: /categories
+          - link "Cart" [ref=e12] [cursor=pointer]:
+            - /url: /cart
+        - generic [ref=e13]:
+          - button "Search" [ref=e14]:
+            - img [ref=e15]
+          - link "Cart" [ref=e18] [cursor=pointer]:
+            - /url: /cart
+            - img [ref=e19]
+            - generic [ref=e23]: "2"
+          - button "Account menu" [ref=e25]:
+            - img [ref=e26]
+            - generic [ref=e29]: My Account
+    - main [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - heading "Shopping Cart(2 items)" [level=1] [ref=e34]:
+              - text: Shopping Cart
+              - generic [ref=e35]: (2 items)
+            - button "Clear all" [ref=e36]
+          - generic [ref=e38]:
+            - generic [ref=e40]:
+              - img "Tecno Spark 20 Pro — 256GB, 8GB RAM" [ref=e42]
+              - generic [ref=e43]:
+                - generic [ref=e44]:
+                  - heading "Tecno Spark 20 Pro — 256GB, 8GB RAM" [level=3] [ref=e45]
+                  - paragraph [ref=e46]: phones-tablets
+                - generic [ref=e47]:
+                  - generic [ref=e48]:
+                    - button [ref=e49]:
+                      - img [ref=e50]
+                    - generic [ref=e51]: "1"
+                    - button [ref=e52]:
+                      - img [ref=e53]
+                  - generic [ref=e54]:
+                    - generic [ref=e55]: ₦134,999
+                    - button [ref=e56]:
+                      - img [ref=e57]
+            - generic [ref=e61]:
+              - img "Apple iPhone 14 — 128GB, Midnight" [ref=e63]
+              - generic [ref=e64]:
+                - generic [ref=e65]:
+                  - heading "Apple iPhone 14 — 128GB, Midnight" [level=3] [ref=e66]
+                  - paragraph [ref=e67]: phones-tablets
+                - generic [ref=e68]:
+                  - generic [ref=e69]:
+                    - button [ref=e70]:
+                      - img [ref=e71]
+                    - generic [ref=e72]: "1"
+                    - button [ref=e73]:
+                      - img [ref=e74]
+                  - generic [ref=e75]:
+                    - generic [ref=e76]: ₦719,999
+                    - button [ref=e77]:
+                      - img [ref=e78]
+        - generic [ref=e81]:
+          - generic [ref=e82]:
+            - generic [ref=e83]:
+              - paragraph [ref=e84]: Total (incl. VAT)
+              - paragraph [ref=e85]: ₦919,123
+            - generic [ref=e86]:
+              - img [ref=e87]
+              - text: Free Shipping
+          - link "Proceed to Checkout" [ref=e92] [cursor=pointer]:
+            - /url: /checkout
+            - text: Proceed to Checkout
+            - img [ref=e93]
+    - contentinfo [ref=e95]:
+      - generic [ref=e96]:
+        - generic [ref=e97]:
+          - generic [ref=e98]:
+            - link "AnchorStore" [ref=e99] [cursor=pointer]:
+              - /url: /
+              - img "AnchorStore" [ref=e101]
+            - paragraph [ref=e102]: Your trusted destination for quality products. We bring the best shopping experience right to your doorstep.
+            - generic [ref=e103]:
+              - generic [ref=e104]:
+                - img [ref=e105]
+                - generic [ref=e108]: support@anchorstore.com
+              - link "09052083623" [ref=e109] [cursor=pointer]:
+                - /url: https://wa.me/2349052083623
+                - img [ref=e110]
+                - generic [ref=e112]: "09052083623"
+              - generic [ref=e113]:
+                - img [ref=e114]
+                - generic [ref=e117]: Lagos, Nigeria
+            - generic [ref=e118]:
+              - link "WhatsApp" [ref=e119] [cursor=pointer]:
+                - /url: https://wa.me/2349052083623
+                - img [ref=e120]
+              - link "Instagram" [ref=e122] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e123]
+              - link "X (Twitter)" [ref=e126] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e127]
+              - link "Facebook" [ref=e129] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e130]
+          - generic [ref=e132]:
+            - heading "Shop" [level=3] [ref=e133]
+            - list [ref=e134]:
+              - listitem [ref=e135]:
+                - link "All Products" [ref=e136] [cursor=pointer]:
+                  - /url: /categories
+              - listitem [ref=e137]:
+                - link "New Arrivals" [ref=e138] [cursor=pointer]:
+                  - /url: /categories
+              - listitem [ref=e139]:
+                - link "Best Sellers" [ref=e140] [cursor=pointer]:
+                  - /url: /categories
+              - listitem [ref=e141]:
+                - link "On Sale" [ref=e142] [cursor=pointer]:
+                  - /url: /categories
+          - generic [ref=e143]:
+            - heading "Support" [level=3] [ref=e144]
+            - list [ref=e145]:
+              - listitem [ref=e146]:
+                - link "Contact Us" [ref=e147] [cursor=pointer]:
+                  - /url: /cart
+              - listitem [ref=e148]:
+                - link "FAQs" [ref=e149] [cursor=pointer]:
+                  - /url: /cart
+              - listitem [ref=e150]:
+                - link "Shipping Info" [ref=e151] [cursor=pointer]:
+                  - /url: /cart
+              - listitem [ref=e152]:
+                - link "Returns" [ref=e153] [cursor=pointer]:
+                  - /url: /cart
+          - generic [ref=e154]:
+            - heading "Company" [level=3] [ref=e155]
+            - list [ref=e156]:
+              - listitem [ref=e157]:
+                - link "About Us" [ref=e158] [cursor=pointer]:
+                  - /url: /cart
+              - listitem [ref=e159]:
+                - link "Careers" [ref=e160] [cursor=pointer]:
+                  - /url: /cart
+              - listitem [ref=e161]:
+                - link "Privacy Policy" [ref=e162] [cursor=pointer]:
+                  - /url: /cart
+              - listitem [ref=e163]:
+                - link "Terms of Service" [ref=e164] [cursor=pointer]:
+                  - /url: /cart
+        - generic [ref=e165]:
+          - paragraph [ref=e166]: © 2026 AnchorStore. All rights reserved.
+          - generic [ref=e167]:
+            - link "WhatsApp" [ref=e168] [cursor=pointer]:
+              - /url: https://wa.me/2349052083623
+              - img [ref=e169]
+            - link "Instagram" [ref=e171] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e172]
+            - link "X (Twitter)" [ref=e175] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e176]
+            - link "Facebook" [ref=e178] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e179]
+  - button "Toggle chat assistant" [ref=e182] [cursor=pointer]:
+    - generic [ref=e183]: "2"
+    - img [ref=e185]

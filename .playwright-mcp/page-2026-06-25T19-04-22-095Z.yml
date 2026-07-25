@@ -1,0 +1,219 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e6]:
+        - link "AnchorStore" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "AnchorStore" [ref=e8]
+        - generic [ref=e9]:
+          - link "Home" [ref=e10] [cursor=pointer]:
+            - /url: /
+          - link "Categories" [ref=e11] [cursor=pointer]:
+            - /url: /categories
+          - link "Cart" [ref=e12] [cursor=pointer]:
+            - /url: /cart
+        - generic [ref=e13]:
+          - button "Search" [ref=e14]:
+            - img [ref=e15]
+          - link "Cart" [ref=e18] [cursor=pointer]:
+            - /url: /cart
+            - img [ref=e19]
+            - generic [ref=e23]: "2"
+          - button "Account menu" [ref=e25]:
+            - img [ref=e26]
+            - generic [ref=e29]: My Account
+    - main [ref=e30]:
+      - generic [ref=e135]:
+        - button "← Back" [ref=e136]
+        - generic [ref=e137]:
+          - generic [ref=e138]:
+            - generic [ref=e139]: "-25% OFF"
+            - img "Apple iPhone 14 — 128GB, Midnight" [ref=e140]
+          - generic [ref=e141]:
+            - generic [ref=e142]: phones-tablets
+            - heading "Apple iPhone 14 — 128GB, Midnight" [level=1] [ref=e143]
+            - generic [ref=e145]:
+              - img [ref=e146]
+              - img [ref=e148]
+              - img [ref=e150]
+              - img [ref=e152]
+              - img [ref=e154]
+            - generic [ref=e156]:
+              - generic [ref=e157]:
+                - img [ref=e158]
+                - text: Almost sold out — 4 left
+              - generic [ref=e160]:
+                - img [ref=e161]
+                - text: 33 others looking at this
+            - generic [ref=e166]:
+              - generic [ref=e167]:
+                - generic [ref=e168]: ₦719,999
+                - generic [ref=e169]: ₦959,999
+              - paragraph [ref=e170]:
+                - generic [ref=e171]: ✓
+                - text: You save ₦240,000 (25% off)
+            - generic [ref=e172]:
+              - img [ref=e173]
+              - generic [ref=e178]: Free delivery — Arrives in 3–5 business days
+            - generic [ref=e179]:
+              - img [ref=e180]
+              - generic [ref=e183]: Order in the next 2 hrs 14 min for same-day dispatch
+            - generic [ref=e184]:
+              - generic [ref=e185]: "Quantity:"
+              - generic [ref=e186]:
+                - button [ref=e187]:
+                  - img [ref=e188]
+                - generic [ref=e189]: "1"
+                - button [ref=e190]:
+                  - img [ref=e191]
+              - generic [ref=e192]: 4 available
+            - generic [ref=e193]:
+              - button "Added to Cart ✓" [active] [ref=e194]:
+                - img [ref=e195]
+                - text: Added to Cart ✓
+              - button [ref=e199]:
+                - img [ref=e200]
+            - button "Buy Now" [ref=e202]
+            - paragraph [ref=e203]: A15 Bionic chip, 12MP dual camera system, Crash Detection, Emergency SOS via satellite.
+            - generic [ref=e204]:
+              - generic [ref=e205]:
+                - img [ref=e207]
+                - paragraph [ref=e212]: Free Delivery
+                - paragraph [ref=e213]: Over ₦50,000
+              - generic [ref=e214]:
+                - img [ref=e216]
+                - paragraph [ref=e218]: 2-Yr Warranty
+                - paragraph [ref=e219]: All products
+              - generic [ref=e220]:
+                - img [ref=e222]
+                - paragraph [ref=e225]: 30-Day Returns
+                - paragraph [ref=e226]: No questions
+        - generic [ref=e227]:
+          - generic [ref=e229]:
+            - heading "Customer Reviews" [level=2] [ref=e230]
+            - generic [ref=e231]:
+              - paragraph [ref=e232]: ⭐
+              - paragraph [ref=e233]: No reviews yet
+              - paragraph [ref=e234]: Be the first to share your experience
+          - generic [ref=e236]:
+            - heading "Write a Review" [level=3] [ref=e237]
+            - generic [ref=e238]:
+              - generic [ref=e239]: Your Rating *
+              - group "Select star rating" [ref=e240]:
+                - button "1 star" [ref=e241]:
+                  - img [ref=e242]
+                - button "2 stars" [ref=e244]:
+                  - img [ref=e245]
+                - button "3 stars" [ref=e247]:
+                  - img [ref=e248]
+                - button "4 stars" [ref=e250]:
+                  - img [ref=e251]
+                - button "5 stars" [ref=e253]:
+                  - img [ref=e254]
+            - generic [ref=e256]:
+              - generic [ref=e257]: Name *
+              - textbox "e.g. Tunde Lawal" [ref=e258]: PlayTest User
+            - generic [ref=e259]:
+              - generic [ref=e260]: Review Title (optional)
+              - textbox "e.g. Great value for money" [ref=e261]
+            - generic [ref=e262]:
+              - generic [ref=e263]: Your Review *
+              - textbox "Share your honest experience with this product..." [ref=e264]
+            - button "Submit Review" [ref=e265]:
+              - img [ref=e266]
+              - text: Submit Review
+    - contentinfo [ref=e43]:
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - generic [ref=e46]:
+            - link "AnchorStore" [ref=e47] [cursor=pointer]:
+              - /url: /
+              - img "AnchorStore" [ref=e49]
+            - paragraph [ref=e50]: Your trusted destination for quality products. We bring the best shopping experience right to your doorstep.
+            - generic [ref=e51]:
+              - generic [ref=e52]:
+                - img [ref=e53]
+                - generic [ref=e56]: support@anchorstore.com
+              - link "09052083623" [ref=e57] [cursor=pointer]:
+                - /url: https://wa.me/2349052083623
+                - img [ref=e58]
+                - generic [ref=e60]: "09052083623"
+              - generic [ref=e61]:
+                - img [ref=e62]
+                - generic [ref=e65]: Lagos, Nigeria
+            - generic [ref=e66]:
+              - link "WhatsApp" [ref=e67] [cursor=pointer]:
+                - /url: https://wa.me/2349052083623
+                - img [ref=e68]
+              - link "Instagram" [ref=e70] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e71]
+              - link "X (Twitter)" [ref=e74] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e75]
+              - link "Facebook" [ref=e77] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e78]
+          - generic [ref=e80]:
+            - heading "Shop" [level=3] [ref=e81]
+            - list [ref=e82]:
+              - listitem [ref=e83]:
+                - link "All Products" [ref=e84] [cursor=pointer]:
+                  - /url: /categories
+              - listitem [ref=e85]:
+                - link "New Arrivals" [ref=e86] [cursor=pointer]:
+                  - /url: /categories
+              - listitem [ref=e87]:
+                - link "Best Sellers" [ref=e88] [cursor=pointer]:
+                  - /url: /categories
+              - listitem [ref=e89]:
+                - link "On Sale" [ref=e90] [cursor=pointer]:
+                  - /url: /categories
+          - generic [ref=e91]:
+            - heading "Support" [level=3] [ref=e92]
+            - list [ref=e93]:
+              - listitem [ref=e94]:
+                - link "Contact Us" [ref=e95] [cursor=pointer]:
+                  - /url: /product/cmqqt5gd1000llnjrb37srrvi
+              - listitem [ref=e96]:
+                - link "FAQs" [ref=e97] [cursor=pointer]:
+                  - /url: /product/cmqqt5gd1000llnjrb37srrvi
+              - listitem [ref=e98]:
+                - link "Shipping Info" [ref=e99] [cursor=pointer]:
+                  - /url: /product/cmqqt5gd1000llnjrb37srrvi
+              - listitem [ref=e100]:
+                - link "Returns" [ref=e101] [cursor=pointer]:
+                  - /url: /product/cmqqt5gd1000llnjrb37srrvi
+          - generic [ref=e102]:
+            - heading "Company" [level=3] [ref=e103]
+            - list [ref=e104]:
+              - listitem [ref=e105]:
+                - link "About Us" [ref=e106] [cursor=pointer]:
+                  - /url: /product/cmqqt5gd1000llnjrb37srrvi
+              - listitem [ref=e107]:
+                - link "Careers" [ref=e108] [cursor=pointer]:
+                  - /url: /product/cmqqt5gd1000llnjrb37srrvi
+              - listitem [ref=e109]:
+                - link "Privacy Policy" [ref=e110] [cursor=pointer]:
+                  - /url: /product/cmqqt5gd1000llnjrb37srrvi
+              - listitem [ref=e111]:
+                - link "Terms of Service" [ref=e112] [cursor=pointer]:
+                  - /url: /product/cmqqt5gd1000llnjrb37srrvi
+        - generic [ref=e113]:
+          - paragraph [ref=e114]: © 2026 AnchorStore. All rights reserved.
+          - generic [ref=e115]:
+            - link "WhatsApp" [ref=e116] [cursor=pointer]:
+              - /url: https://wa.me/2349052083623
+              - img [ref=e117]
+            - link "Instagram" [ref=e119] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e120]
+            - link "X (Twitter)" [ref=e123] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e124]
+            - link "Facebook" [ref=e126] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e127]
+  - button "Toggle chat assistant" [ref=e130] [cursor=pointer]:
+    - generic [ref=e131]: "2"
+    - img [ref=e133]

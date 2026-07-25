@@ -1,0 +1,128 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - link [ref=e8] [cursor=pointer]:
+            - /url: https://mail.google.com/mail/&ogbl
+            - text: Gmail
+          - link [ref=e10] [cursor=pointer]:
+            - /url: https://www.google.com/imghp?hl=en&ogbl
+            - text: Images
+        - button [ref=e13] [cursor=pointer]:
+          - img [ref=e14]
+        - link [ref=e18] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=futura_exp_og_so_72776762_e
+          - text: Sign in
+    - generic [ref=e20]:
+      - link [ref=e22] [cursor=pointer]:
+        - /url: /search?sca_esv=c05f2014a7a2071a&q=FIFA+World+Cup+2026+standings&oi=ddle&noiga=1&ct=516785957&hl=en-GB&sa=X&ved=0ahUKEwilz8Hp7aKVAxWKR-sIHT6iBC4QPQgE
+        - img [ref=e24]
+      - button [ref=e26]:
+        - img [ref=e31] [cursor=pointer]
+    - search [ref=e34]:
+      - generic [ref=e36]:
+        - generic [ref=e38]:
+          - button [ref=e41] [cursor=pointer]:
+            - img [ref=e43]
+          - combobox [ref=e46]
+          - generic [ref=e47]:
+            - generic [ref=e48]:
+              - button [ref=e49] [cursor=pointer]:
+                - img [ref=e50]
+              - button [ref=e52] [cursor=pointer]:
+                - img [ref=e53]
+            - link [ref=e55] [cursor=pointer]:
+              - generic [ref=e57]:
+                - img [ref=e59]
+                - generic [ref=e66]: AI Mode
+        - generic [ref=e68]:
+          - button [ref=e69] [cursor=pointer]: Google Search
+          - button [ref=e70] [cursor=pointer]: I'm Feeling Lucky
+    - generic [ref=e73]:
+      - text: "Google offered in:"
+      - link [ref=e74] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_1PXcv5aouz-9ywbF1Dbn4Yma1HY%3D&hl=ha&source=homepage&sa=X&ved=0ahUKEwilz8Hp7aKVAxWKR-sIHT6iBC4Q2ZgBCDc
+        - text: Hausa
+      - link [ref=e75] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_1PXcv5aouz-9ywbF1Dbn4Yma1HY%3D&hl=ig&source=homepage&sa=X&ved=0ahUKEwilz8Hp7aKVAxWKR-sIHT6iBC4Q2ZgBCDg
+        - text: Igbo
+      - link [ref=e76] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_1PXcv5aouz-9ywbF1Dbn4Yma1HY%3D&hl=yo&source=homepage&sa=X&ved=0ahUKEwilz8Hp7aKVAxWKR-sIHT6iBC4Q2ZgBCDk
+        - text: Èdè Yorùbá
+      - link [ref=e77] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_1PXcv5aouz-9ywbF1Dbn4Yma1HY%3D&hl=pcm&source=homepage&sa=X&ved=0ahUKEwilz8Hp7aKVAxWKR-sIHT6iBC4Q2ZgBCDo
+        - text: Nigerian Pidgin
+    - contentinfo [ref=e79]:
+      - generic [ref=e80]: Nigeria
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - link [ref=e83] [cursor=pointer]:
+            - /url: https://about.google/?utm_source=google-NG&utm_medium=referral&utm_campaign=hp-footer&fg=1
+            - text: About
+          - link [ref=e84] [cursor=pointer]:
+            - /url: https://www.google.com/intl/en_ng/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1
+            - text: Advertising
+          - link [ref=e85] [cursor=pointer]:
+            - /url: https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1
+            - text: Business
+          - link [ref=e86] [cursor=pointer]:
+            - /url: https://google.com/search/howsearchworks/?fg=1
+            - text: How Search works
+        - link [ref=e88] [cursor=pointer]:
+          - /url: https://ai.google/helpful-tools/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer
+          - text: Build, create, and do more with AI tools from Google
+        - generic [ref=e89]:
+          - link [ref=e90] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=en-NG&fg=1
+            - text: Privacy
+          - link [ref=e91] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=en-NG&fg=1
+            - text: Terms
+          - button [ref=e95] [cursor=pointer]:
+            - generic [ref=e96]: Settings
+  - generic:
+    - dialog "Before you continue to Google Search":
+      - generic [ref=e103]:
+        - generic [ref=e105]:
+          - img "Google" [ref=e106]
+          - generic [ref=e107]:
+            - 'button "Language: ‪English‬" [active] [ref=e109] [cursor=pointer]':
+              - generic [ref=e110]:
+                - img
+                - generic [ref=e111]: en
+            - link "Sign in" [ref=e112] [cursor=pointer]
+        - generic [ref=e113]:
+          - heading "Before you continue to Google" [level=1] [ref=e114]
+          - generic [ref=e115]:
+            - generic [ref=e116]:
+              - text: We use
+              - link "cookies" [ref=e117] [cursor=pointer]:
+                - /url: https://policies.google.com/technologies/cookies?utm_source=ucbs&hl=en-NG
+              - text: and data to
+              - list [ref=e118]:
+                - listitem [ref=e119]: Deliver and maintain Google services
+                - listitem [ref=e120]: Track outages and protect against spam, fraud and abuse
+                - listitem [ref=e121]: Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services
+            - generic [ref=e122]:
+              - text: If you choose to 'Accept all', we will also use cookies and data to
+              - list [ref=e123]:
+                - listitem [ref=e124]: Develop and improve new services
+                - listitem [ref=e125]: Deliver and measure the effectiveness of ads
+                - listitem [ref=e126]: Show personalised content, depending on your settings
+                - listitem [ref=e127]: Show personalised ads, depending on your settings
+              - generic [ref=e128]: If you choose to 'Reject all', we will not use cookies for these additional purposes.
+            - generic [ref=e129]: Non-personalised content is influenced by things like the content that you’re currently viewing, activity in your active Search session, and your location. Non-personalised ads are influenced by the content that you’re currently viewing and your general location. Personalised content and ads can also include more relevant results, recommendations and tailored ads based on past activity from this browser, like previous Google searches. We also use cookies and data to tailor the experience to be age-appropriate, if relevant.
+            - generic [ref=e130]: Select 'More options' to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time.
+        - generic [ref=e131]:
+          - generic [ref=e132]:
+            - button "Reject all" [ref=e133] [cursor=pointer]
+            - button "Accept all" [ref=e134] [cursor=pointer]
+          - link "More options for personalisation settings and cookies" [ref=e136] [cursor=pointer]:
+            - generic "More options for personalisation settings and cookies" [ref=e137]: More options
+        - generic [ref=e138]:
+          - link "Privacy" [ref=e139] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=en-NG&fg=1&utm_source=ucbs
+          - generic [ref=e140]: ·
+          - link "Terms" [ref=e141] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=en-NG&fg=1&utm_source=ucbs

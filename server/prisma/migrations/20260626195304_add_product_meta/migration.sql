@@ -1,0 +1,7 @@
+-- AlterTable
+ALTER TABLE "products" ADD COLUMN     "deliveryEstimate" TEXT,
+ADD COLUMN     "fbt" TEXT[] DEFAULT ARRAY[]::TEXT[],
+ADD COLUMN     "rating" DOUBLE PRECISION NOT NULL DEFAULT 0,
+ADD COLUMN     "returnPolicy" TEXT,
+ADD COLUMN     "reviewCount" INTEGER NOT NULL DEFAULT 0,
+ADD COLUMN     "stockQuantity" INTEGER NOT NULL DEFAULT 100;

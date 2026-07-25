@@ -1,0 +1,19 @@
+meta {
+  name: Update Product
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:5000/api/products/cmqi5yzqn0001ozqw92k3embq
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "MacBook Pro",
+    "unitPrice": 2800000,
+    "categoryId": "cmqgg3spx0000viznx5qlnzbw"
+  }
+}

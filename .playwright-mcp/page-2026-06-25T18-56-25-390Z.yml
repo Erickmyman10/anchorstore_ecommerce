@@ -1,0 +1,118 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e6]:
+        - link "AnchorStore" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "AnchorStore" [ref=e8]
+        - generic [ref=e9]:
+          - link "Home" [ref=e10] [cursor=pointer]:
+            - /url: /
+          - link "Categories" [ref=e11] [cursor=pointer]:
+            - /url: /categories
+          - link "Cart" [ref=e12] [cursor=pointer]:
+            - /url: /cart
+        - generic [ref=e13]:
+          - button "Search" [ref=e14]:
+            - img [ref=e15]
+          - link "Cart" [ref=e18] [cursor=pointer]:
+            - /url: /cart
+            - img [ref=e19]
+          - button "Account menu" [ref=e24]:
+            - img [ref=e25]
+            - generic [ref=e28]: My Account
+    - main [ref=e29]
+    - contentinfo [ref=e42]:
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - link "AnchorStore" [ref=e46] [cursor=pointer]:
+              - /url: /
+              - img "AnchorStore" [ref=e48]
+            - paragraph [ref=e49]: Your trusted destination for quality products. We bring the best shopping experience right to your doorstep.
+            - generic [ref=e50]:
+              - generic [ref=e51]:
+                - img [ref=e52]
+                - generic [ref=e55]: support@anchorstore.com
+              - link "09052083623" [ref=e56] [cursor=pointer]:
+                - /url: https://wa.me/2349052083623
+                - img [ref=e57]
+                - generic [ref=e59]: "09052083623"
+              - generic [ref=e60]:
+                - img [ref=e61]
+                - generic [ref=e64]: Lagos, Nigeria
+            - generic [ref=e65]:
+              - link "WhatsApp" [ref=e66] [cursor=pointer]:
+                - /url: https://wa.me/2349052083623
+                - img [ref=e67]
+              - link "Instagram" [ref=e69] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e70]
+              - link "X (Twitter)" [ref=e73] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e74]
+              - link "Facebook" [ref=e76] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e77]
+          - generic [ref=e79]:
+            - heading "Shop" [level=3] [ref=e80]
+            - list [ref=e81]:
+              - listitem [ref=e82]:
+                - link "All Products" [ref=e83] [cursor=pointer]:
+                  - /url: /categories
+              - listitem [ref=e84]:
+                - link "New Arrivals" [ref=e85] [cursor=pointer]:
+                  - /url: /categories
+              - listitem [ref=e86]:
+                - link "Best Sellers" [ref=e87] [cursor=pointer]:
+                  - /url: /categories
+              - listitem [ref=e88]:
+                - link "On Sale" [ref=e89] [cursor=pointer]:
+                  - /url: /categories
+          - generic [ref=e90]:
+            - heading "Support" [level=3] [ref=e91]
+            - list [ref=e92]:
+              - listitem [ref=e93]:
+                - link "Contact Us" [ref=e94] [cursor=pointer]:
+                  - /url: /product/cmqqt5gcs000hlnjrsh9ag1zg
+              - listitem [ref=e95]:
+                - link "FAQs" [ref=e96] [cursor=pointer]:
+                  - /url: /product/cmqqt5gcs000hlnjrsh9ag1zg
+              - listitem [ref=e97]:
+                - link "Shipping Info" [ref=e98] [cursor=pointer]:
+                  - /url: /product/cmqqt5gcs000hlnjrsh9ag1zg
+              - listitem [ref=e99]:
+                - link "Returns" [ref=e100] [cursor=pointer]:
+                  - /url: /product/cmqqt5gcs000hlnjrsh9ag1zg
+          - generic [ref=e101]:
+            - heading "Company" [level=3] [ref=e102]
+            - list [ref=e103]:
+              - listitem [ref=e104]:
+                - link "About Us" [ref=e105] [cursor=pointer]:
+                  - /url: /product/cmqqt5gcs000hlnjrsh9ag1zg
+              - listitem [ref=e106]:
+                - link "Careers" [ref=e107] [cursor=pointer]:
+                  - /url: /product/cmqqt5gcs000hlnjrsh9ag1zg
+              - listitem [ref=e108]:
+                - link "Privacy Policy" [ref=e109] [cursor=pointer]:
+                  - /url: /product/cmqqt5gcs000hlnjrsh9ag1zg
+              - listitem [ref=e110]:
+                - link "Terms of Service" [ref=e111] [cursor=pointer]:
+                  - /url: /product/cmqqt5gcs000hlnjrsh9ag1zg
+        - generic [ref=e112]:
+          - paragraph [ref=e113]: © 2026 AnchorStore. All rights reserved.
+          - generic [ref=e114]:
+            - link "WhatsApp" [ref=e115] [cursor=pointer]:
+              - /url: https://wa.me/2349052083623
+              - img [ref=e116]
+            - link "Instagram" [ref=e118] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e119]
+            - link "X (Twitter)" [ref=e122] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e123]
+            - link "Facebook" [ref=e125] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e126]
+  - button "Toggle chat assistant" [ref=e129] [cursor=pointer]:
+    - img [ref=e131]

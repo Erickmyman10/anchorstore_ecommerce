@@ -1,0 +1,122 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model User {
+  id        String   @id @default(cuid())
+  username  String   @unique
+  password  String
+  email     String   @unique
+  avatar    String?
+  role      Role     @default(USER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  profile Profile?
+  orders  Order[]
+
+  @@map("users")
+}
+
+model Profile {
+  id          Int     @id @default(autoincrement())
+  fullName    String
+  address     String
+  phoneNumber String
+  userId      String  @unique
+  user        User    @relation(fields: [userId], references: [id])
+
+  @@map("profiles")
+}
+
+model Category {
+  id       String    @id @unique @default(cuid())
+  name     String
+  products Product[]
+
+  @@map("categories")
+}
+
+model Product {
+  id               String   @id @default(cuid())
+  name             String
+  unitPrice        Decimal
+  image            String?
+  images           String[] @default([])
+  description      String?
+  categoryId       String
+  category         Category @relation(fields: [categoryId], references: [id])
+  rating           Float    @default(0)
+  reviewCount      Int      @default(0)
+  deliveryEstimate String?
+  returnPolicy     String?
+  stockQuantity    Int      @default(100)
+  fbt              String[] @default([])
+
+  @@map("products")
+}
+
+model Order {
+  id            String      @id @default(cuid())
+  userId        String
+  user          User        @relation(fields: [userId], references: [id])
+  total         Decimal
+  status        String      @default("pending")
+  trackingCode  String      @unique
+  paymentMethod String
+  paymentStatus String      @default("pending")
+  name          String
+  email         String
+  phone         String
+  street        String
+  city          String
+  state         String
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  items         OrderItem[]
+
+  @@map("orders")
+}
+
+model OrderItem {
+  id        String  @id @default(cuid())
+  orderId   String
+  order     Order   @relation(fields: [orderId], references: [id])
+  productId String
+  quantity  Int
+  price     Decimal
+
+  @@map("order_items")
+}
+
+model Review {
+  id        String   @id @default(cuid())
+  productId String
+  userId    String?
+  name      String
+  title     String?
+  rating    Int
+  comment   String
+  verified  Boolean  @default(false)
+  likes     Int      @default(0)
+  dislikes  Int      @default(0)
+  createdAt DateTime @default(now())
+
+  @@map("reviews")
+}

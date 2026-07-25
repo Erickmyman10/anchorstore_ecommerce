@@ -1,0 +1,23 @@
+info:
+  name: "Create Product "
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/products"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Samsung TV",
+        "unitPrice": 250000,
+        "categoryId": "cmqgg3spx0000viznx5qlnzbw"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

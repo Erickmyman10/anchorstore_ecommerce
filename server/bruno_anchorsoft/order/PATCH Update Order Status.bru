@@ -1,0 +1,27 @@
+meta {
+  name: PATCH Update Order Status
+  type: http
+  seq: 4
+}
+
+patch {
+  url: http://localhost:5000/api/orders/:id/status
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+body:json {
+  {
+    "status": "confirmed",
+    "paymentStatus": "success"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

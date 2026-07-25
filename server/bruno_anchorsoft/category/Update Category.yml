@@ -1,0 +1,18 @@
+info:
+  name: Update Category
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: "{{baseUrl}}/api/categories/cmqi4lfvq0000zupmgf6q6wqt"
+  body:
+    type: json
+    data: '{ "name": "Home Electronics" }'
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

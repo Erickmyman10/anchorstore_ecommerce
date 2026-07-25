@@ -1,0 +1,17 @@
+[     821ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:14336
+[  191836ms] Uncaught Error: Attribute callback must be a valid function
+    at i (https://js.paystack.co/v1/inline.js:0:16606)
+    at r (https://js.paystack.co/v1/inline.js:0:16508)
+    at validateInputTypes (https://js.paystack.co/v1/inline.js:0:16343)
+    at isValid (https://js.paystack.co/v1/inline.js:0:15083)
+    at setup (https://js.paystack.co/v1/inline.js:0:14373)
+    at openPaystackPopup (http://localhost:3001/src/pages/Checkout.jsx:226:37)
+    at handlePlaceOrder (http://localhost:3001/src/pages/Checkout.jsx:311:3)
+    at executeDispatch (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:9139:4)
+    at runWithFiberInDEV (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:849:65)
+    at processDispatchQueue (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:9165:26)
+    at <anonymous> (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:9452:4)
+    at batchedUpdates$1 (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:2042:11)
+    at dispatchEventForPluginEventSystem (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:9238:3)
+    at dispatchEvent (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:11317:28)
+    at dispatchDiscreteEvent (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:11299:55)

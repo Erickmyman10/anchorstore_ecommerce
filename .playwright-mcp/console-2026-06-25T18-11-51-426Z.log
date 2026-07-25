@@ -1,0 +1,27 @@
+[    1014ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:14336
+[    1426ms] [ERROR] Access to fetch at 'http://localhost:5000/api/products' from origin 'http://localhost:3001' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: The 'Access-Control-Allow-Origin' header has a value 'http://localhost:3000' that is not equal to the supplied origin. Have the server send the header with a valid value. @ http://localhost:3001/:0
+[    1426ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:5000/api/products:0
+[    1426ms] [ERROR] API Error: TypeError: Failed to fetch
+    at ApiService.request (http://localhost:3001/src/services/api.js:43:27)
+    at ApiService.getProducts (http://localhost:3001/src/services/api.js:52:15)
+    at getMergedProducts (http://localhost:3001/src/services/api.js:118:29)
+    at http://localhost:3001/src/pages/Home.jsx:218:3
+    at Object.react_stack_bottom_frame (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:12903:13)
+    at runWithFiberInDEV (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:850:66)
+    at commitHookEffectListMount (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:6616:153)
+    at commitHookPassiveMountEffects (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:6651:55)
+    at commitPassiveMountOnFiber (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:7617:22)
+    at recursivelyTraversePassiveMountEffects (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:7605:5) @ http://localhost:3001/src/services/api.js:46
+[    1427ms] [ERROR] Access to fetch at 'http://localhost:5000/api/products' from origin 'http://localhost:3001' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: The 'Access-Control-Allow-Origin' header has a value 'http://localhost:3000' that is not equal to the supplied origin. Have the server send the header with a valid value. @ http://localhost:3001/:0
+[    1427ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:5000/api/products:0
+[    1427ms] [ERROR] API Error: TypeError: Failed to fetch
+    at ApiService.request (http://localhost:3001/src/services/api.js:43:27)
+    at ApiService.getProducts (http://localhost:3001/src/services/api.js:52:15)
+    at getMergedProducts (http://localhost:3001/src/services/api.js:118:29)
+    at http://localhost:3001/src/pages/Home.jsx:218:3
+    at Object.react_stack_bottom_frame (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:12903:13)
+    at runWithFiberInDEV (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:850:66)
+    at commitHookEffectListMount (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:6616:153)
+    at commitHookPassiveMountEffects (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:6651:55)
+    at reconnectPassiveEffects (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:7700:6)
+    at recursivelyTraverseReconnectPassiveEffects (http://localhost:3001/node_modules/.vite/deps/react-dom_client.js?v=d2eaf5ea:7687:5) @ http://localhost:3001/src/services/api.js:46

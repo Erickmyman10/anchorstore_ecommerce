@@ -1,0 +1,676 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e6]:
+        - link "AnchorStore" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "AnchorStore" [ref=e8]
+        - generic [ref=e9]:
+          - link "Home" [ref=e10] [cursor=pointer]:
+            - /url: /
+          - link "Categories" [ref=e11] [cursor=pointer]:
+            - /url: /categories
+          - link "Cart" [ref=e12] [cursor=pointer]:
+            - /url: /cart
+        - generic [ref=e13]:
+          - button "Search" [ref=e14]:
+            - img [ref=e15]
+          - link "Cart" [ref=e18] [cursor=pointer]:
+            - /url: /cart
+            - img [ref=e19]
+          - link "Sign in" [ref=e23] [cursor=pointer]:
+            - /url: /login
+            - img [ref=e24]
+            - generic [ref=e27]: My Account
+    - main [ref=e28]:
+      - generic [ref=e30]:
+        - generic [ref=e33]:
+          - generic [ref=e47]:
+            - img [ref=e48]
+            - generic [ref=e54]:
+              - generic [ref=e55]: 🔥 Trending Now
+              - heading "Next-Gen Tech For Every Need" [level=1] [ref=e56]:
+                - text: Next-Gen Tech
+                - text: For Every Need
+              - paragraph [ref=e57]: Discover cutting-edge electronics at the best prices in Nigeria.
+          - generic [ref=e35]:
+            - img [ref=e36]
+            - generic [ref=e42]:
+              - generic [ref=e43]: ✨ New Arrivals
+              - heading "Style That Speaks Louder" [level=1] [ref=e44]:
+                - text: Style That
+                - text: Speaks Louder
+              - paragraph [ref=e45]: Explore premium fashion collections curated just for you.
+        - generic [ref=e63]:
+          - generic [ref=e64]:
+            - img [ref=e66]
+            - generic [ref=e71]:
+              - paragraph [ref=e72]: Free Shipping
+              - paragraph [ref=e73]: On orders over ₦50,000
+          - generic [ref=e74]:
+            - img [ref=e76]
+            - generic [ref=e79]:
+              - paragraph [ref=e80]: Easy Returns
+              - paragraph [ref=e81]: 30-day return policy
+          - generic [ref=e82]:
+            - img [ref=e84]
+            - generic [ref=e86]:
+              - paragraph [ref=e87]: Secure Payment
+              - paragraph [ref=e88]: 100% safe checkout
+          - generic [ref=e89]:
+            - img [ref=e91]
+            - generic [ref=e93]:
+              - paragraph [ref=e94]: 24/7 Support
+              - paragraph [ref=e95]: Always here for you
+        - generic [ref=e97]:
+          - generic [ref=e98]:
+            - heading "Shop by Category" [level=2] [ref=e99]
+            - paragraph [ref=e100]: Find exactly what you're looking for
+          - generic [ref=e101]:
+            - link "Official Store 8+ Products Official Store Shop Now" [ref=e388] [cursor=pointer]:
+              - /url: /categories?category=official-store
+              - generic [ref=e104]:
+                - img "Official Store" [ref=e105]
+                - generic [ref=e110]:
+                  - paragraph [ref=e389]: 8+ Products
+                  - heading "Official Store" [level=3] [ref=e111]
+                  - generic [ref=e112]:
+                    - text: Shop Now
+                    - img [ref=e113]
+            - link "Phones & Tablets 14+ Products Phones & Tablets Shop Now" [ref=e390] [cursor=pointer]:
+              - /url: /categories?category=phones-tablets
+              - generic [ref=e117]:
+                - img "Phones & Tablets" [ref=e118]
+                - generic [ref=e123]:
+                  - paragraph [ref=e391]: 14+ Products
+                  - heading "Phones & Tablets" [level=3] [ref=e124]
+                  - generic [ref=e125]:
+                    - text: Shop Now
+                    - img [ref=e126]
+            - link "Computing 3+ Products Computing Shop Now" [ref=e392] [cursor=pointer]:
+              - /url: /categories?category=computing
+              - generic [ref=e130]:
+                - img "Computing" [ref=e131]
+                - generic [ref=e136]:
+                  - paragraph [ref=e393]: 3+ Products
+                  - heading "Computing" [level=3] [ref=e137]
+                  - generic [ref=e138]:
+                    - text: Shop Now
+                    - img [ref=e139]
+            - link "Electronics 14+ Products Electronics Shop Now" [ref=e394] [cursor=pointer]:
+              - /url: /categories?category=electronics
+              - generic [ref=e143]:
+                - img "Electronics" [ref=e144]
+                - generic [ref=e149]:
+                  - paragraph [ref=e395]: 14+ Products
+                  - heading "Electronics" [level=3] [ref=e150]
+                  - generic [ref=e151]:
+                    - text: Shop Now
+                    - img [ref=e152]
+            - link "Appliances 9+ Products Appliances Shop Now" [ref=e396] [cursor=pointer]:
+              - /url: /categories?category=appliances
+              - generic [ref=e156]:
+                - img "Appliances" [ref=e157]
+                - generic [ref=e162]:
+                  - paragraph [ref=e397]: 9+ Products
+                  - heading "Appliances" [level=3] [ref=e163]
+                  - generic [ref=e164]:
+                    - text: Shop Now
+                    - img [ref=e165]
+            - link "Fashion 23+ Products Fashion Shop Now" [ref=e398] [cursor=pointer]:
+              - /url: /categories?category=fashion
+              - generic [ref=e169]:
+                - img "Fashion" [ref=e170]
+                - generic [ref=e175]:
+                  - paragraph [ref=e399]: 23+ Products
+                  - heading "Fashion" [level=3] [ref=e176]
+                  - generic [ref=e177]:
+                    - text: Shop Now
+                    - img [ref=e178]
+            - link "Health & Beauty 8+ Products Health & Beauty Shop Now" [ref=e400] [cursor=pointer]:
+              - /url: /categories?category=health-beauty
+              - generic [ref=e182]:
+                - img "Health & Beauty" [ref=e183]
+                - generic [ref=e188]:
+                  - paragraph [ref=e401]: 8+ Products
+                  - heading "Health & Beauty" [level=3] [ref=e189]
+                  - generic [ref=e190]:
+                    - text: Shop Now
+                    - img [ref=e191]
+            - link "Home & Office 8+ Products Home & Office Shop Now" [ref=e402] [cursor=pointer]:
+              - /url: /categories?category=home-office
+              - generic [ref=e195]:
+                - img "Home & Office" [ref=e196]
+                - generic [ref=e201]:
+                  - paragraph [ref=e403]: 8+ Products
+                  - heading "Home & Office" [level=3] [ref=e202]
+                  - generic [ref=e203]:
+                    - text: Shop Now
+                    - img [ref=e204]
+          - link "Browse all 11 categories" [ref=e207] [cursor=pointer]:
+            - /url: /categories
+            - text: Browse all 11 categories
+            - img [ref=e208]
+        - generic [ref=e211]:
+          - generic [ref=e212]:
+            - generic [ref=e213]:
+              - heading "Featured Products" [level=2] [ref=e214]
+              - paragraph [ref=e215]: Hand-picked deals, just for you
+            - link "View All" [ref=e216] [cursor=pointer]:
+              - /url: /categories
+              - text: View All
+              - img [ref=e217]
+          - generic [ref=e219]:
+            - img
+            - textbox "Search products by name…" [ref=e220]
+          - generic [ref=e221]:
+            - generic [ref=e405]:
+              - link "HP Spectre x360 14 — Core i7, 16GB, 1TB SSD HP Spectre x360 14 — Core i7, 16GB, 1TB SSD — view 2 HP Spectre x360 14 — Core i7, 16GB, 1TB SSD — view 3 Wishlist HOT DEAL -30% official-store HP Spectre x360 14 — Core i7, 16GB, 1TB SSD ₦1,099,999 ₦1,571,427 Save ₦471,428" [ref=e406] [cursor=pointer]:
+                - /url: /product/cmqqt5gc40009lnjrgsbueugj
+                - generic [ref=e407]:
+                  - generic [ref=e408]:
+                    - img "HP Spectre x360 14 — Core i7, 16GB, 1TB SSD" [ref=e409]
+                    - img "HP Spectre x360 14 — Core i7, 16GB, 1TB SSD — view 2" [ref=e410]
+                    - img "HP Spectre x360 14 — Core i7, 16GB, 1TB SSD — view 3" [ref=e411]
+                  - button "Wishlist" [ref=e416]:
+                    - img [ref=e417]
+                  - generic [ref=e419]:
+                    - generic [ref=e420]:
+                      - img [ref=e421]
+                      - text: HOT DEAL
+                    - generic [ref=e423]: "-30%"
+                - generic [ref=e424]:
+                  - generic [ref=e425]: official-store
+                  - heading "HP Spectre x360 14 — Core i7, 16GB, 1TB SSD" [level=3] [ref=e426]
+                  - generic [ref=e428]:
+                    - img [ref=e429]
+                    - img [ref=e431]
+                    - img [ref=e433]
+                    - img [ref=e435]
+                    - img [ref=e437]
+                  - generic [ref=e439]:
+                    - generic [ref=e440]:
+                      - paragraph [ref=e441]: ₦1,099,999
+                      - paragraph [ref=e442]: ₦1,571,427
+                    - paragraph [ref=e443]: Save ₦471,428
+              - button "Add to Cart" [ref=e445]:
+                - img [ref=e446]
+                - text: Add to Cart
+            - generic [ref=e451]:
+              - link "Tecno Phantom V Fold 2 — 512GB, Moonlit Silver Wishlist official-store Tecno Phantom V Fold 2 — 512GB, Moonlit Silver ₦699,999" [ref=e452] [cursor=pointer]:
+                - /url: /product/cmqqt5gcf000dlnjr9d75lsg2
+                - generic [ref=e453]:
+                  - img "Tecno Phantom V Fold 2 — 512GB, Moonlit Silver" [ref=e454]
+                  - button "Wishlist" [ref=e455]:
+                    - img [ref=e456]
+                - generic [ref=e458]:
+                  - generic [ref=e459]: official-store
+                  - heading "Tecno Phantom V Fold 2 — 512GB, Moonlit Silver" [level=3] [ref=e460]
+                  - generic [ref=e462]:
+                    - img [ref=e463]
+                    - img [ref=e465]
+                    - img [ref=e467]
+                    - img [ref=e469]
+                    - img [ref=e471]
+                  - paragraph [ref=e475]: ₦699,999
+              - button "Add to Cart" [ref=e477]:
+                - img [ref=e478]
+                - text: Add to Cart
+            - generic [ref=e483]:
+              - link "Apple MacBook Pro M3 Pro 14\" — 18GB, 512GB Apple MacBook Pro M3 Pro 14\" — 18GB, 512GB — view 2 Wishlist official-store Apple MacBook Pro M3 Pro 14\" — 18GB, 512GB ₦2,099,999" [ref=e484] [cursor=pointer]:
+                - /url: /product/cmqqt5gcm000flnjrksunz69z
+                - generic [ref=e485]:
+                  - generic [ref=e486]:
+                    - img "Apple MacBook Pro M3 Pro 14\" — 18GB, 512GB" [ref=e487]
+                    - img "Apple MacBook Pro M3 Pro 14\" — 18GB, 512GB — view 2" [ref=e488]
+                  - button "Wishlist" [ref=e492]:
+                    - img [ref=e493]
+                - generic [ref=e495]:
+                  - generic [ref=e496]: official-store
+                  - heading "Apple MacBook Pro M3 Pro 14\" — 18GB, 512GB" [level=3] [ref=e497]
+                  - generic [ref=e499]:
+                    - img [ref=e500]
+                    - img [ref=e502]
+                    - img [ref=e504]
+                    - img [ref=e506]
+                    - img [ref=e508]
+                  - paragraph [ref=e512]: ₦2,099,999
+              - button "Add to Cart" [ref=e514]:
+                - img [ref=e515]
+                - text: Add to Cart
+            - generic [ref=e520]:
+              - link "Tecno Spark 20 Pro — 256GB, 8GB RAM Wishlist HOT DEAL -35% phones-tablets Tecno Spark 20 Pro — 256GB, 8GB RAM ₦134,999 ₦207,691 Save ₦72,692" [ref=e521] [cursor=pointer]:
+                - /url: /product/cmqqt5gcs000hlnjrsh9ag1zg
+                - generic [ref=e522]:
+                  - img "Tecno Spark 20 Pro — 256GB, 8GB RAM" [ref=e523]
+                  - button "Wishlist" [ref=e524]:
+                    - img [ref=e525]
+                  - generic [ref=e527]:
+                    - generic [ref=e528]:
+                      - img [ref=e529]
+                      - text: HOT DEAL
+                    - generic [ref=e531]: "-35%"
+                - generic [ref=e532]:
+                  - generic [ref=e533]: phones-tablets
+                  - heading "Tecno Spark 20 Pro — 256GB, 8GB RAM" [level=3] [ref=e534]
+                  - generic [ref=e536]:
+                    - img [ref=e537]
+                    - img [ref=e539]
+                    - img [ref=e541]
+                    - img [ref=e543]
+                    - img [ref=e545]
+                  - generic [ref=e547]:
+                    - generic [ref=e548]:
+                      - paragraph [ref=e549]: ₦134,999
+                      - paragraph [ref=e550]: ₦207,691
+                    - paragraph [ref=e551]: Save ₦72,692
+              - button "Add to Cart" [ref=e553]:
+                - img [ref=e554]
+                - text: Add to Cart
+            - generic [ref=e559]:
+              - link "Samsung Galaxy A55 — 128GB, 8GB RAM, IP67 Wishlist phones-tablets Samsung Galaxy A55 — 128GB, 8GB RAM, IP67 ₦309,999" [ref=e560] [cursor=pointer]:
+                - /url: /product/cmqqt5gcw000jlnjr456lq1py
+                - generic [ref=e561]:
+                  - img "Samsung Galaxy A55 — 128GB, 8GB RAM, IP67" [ref=e562]
+                  - button "Wishlist" [ref=e563]:
+                    - img [ref=e564]
+                - generic [ref=e566]:
+                  - generic [ref=e567]: phones-tablets
+                  - heading "Samsung Galaxy A55 — 128GB, 8GB RAM, IP67" [level=3] [ref=e568]
+                  - generic [ref=e570]:
+                    - img [ref=e571]
+                    - img [ref=e573]
+                    - img [ref=e575]
+                    - img [ref=e577]
+                    - img [ref=e579]
+                  - paragraph [ref=e583]: ₦309,999
+              - button "Add to Cart" [ref=e585]:
+                - img [ref=e586]
+                - text: Add to Cart
+            - generic [ref=e591]:
+              - link "Apple iPhone 14 — 128GB, Midnight Wishlist HOT DEAL -25% phones-tablets Apple iPhone 14 — 128GB, Midnight ₦719,999 ₦959,999 Save ₦240,000" [ref=e592] [cursor=pointer]:
+                - /url: /product/cmqqt5gd1000llnjrb37srrvi
+                - generic [ref=e593]:
+                  - img "Apple iPhone 14 — 128GB, Midnight" [ref=e594]
+                  - button "Wishlist" [ref=e595]:
+                    - img [ref=e596]
+                  - generic [ref=e598]:
+                    - generic [ref=e599]:
+                      - img [ref=e600]
+                      - text: HOT DEAL
+                    - generic [ref=e602]: "-25%"
+                - generic [ref=e603]:
+                  - generic [ref=e604]: phones-tablets
+                  - heading "Apple iPhone 14 — 128GB, Midnight" [level=3] [ref=e605]
+                  - generic [ref=e607]:
+                    - img [ref=e608]
+                    - img [ref=e610]
+                    - img [ref=e612]
+                    - img [ref=e614]
+                    - img [ref=e616]
+                  - generic [ref=e618]:
+                    - generic [ref=e619]:
+                      - paragraph [ref=e620]: ₦719,999
+                      - paragraph [ref=e621]: ₦959,999
+                    - paragraph [ref=e622]: Save ₦240,000
+              - button "Add to Cart" [ref=e624]:
+                - img [ref=e625]
+                - text: Add to Cart
+            - generic [ref=e630]:
+              - link "Samsung Galaxy A15 4G — 128GB, 4GB RAM Wishlist HOT DEAL -35% phones-tablets Samsung Galaxy A15 4G — 128GB, 4GB RAM ₦99,999 ₦153,845 Save ₦53,846" [ref=e631] [cursor=pointer]:
+                - /url: /product/cmqqt5gd4000nlnjrtbg1nu0s
+                - generic [ref=e632]:
+                  - img "Samsung Galaxy A15 4G — 128GB, 4GB RAM" [ref=e633]
+                  - button "Wishlist" [ref=e634]:
+                    - img [ref=e635]
+                  - generic [ref=e637]:
+                    - generic [ref=e638]:
+                      - img [ref=e639]
+                      - text: HOT DEAL
+                    - generic [ref=e641]: "-35%"
+                - generic [ref=e642]:
+                  - generic [ref=e643]: phones-tablets
+                  - heading "Samsung Galaxy A15 4G — 128GB, 4GB RAM" [level=3] [ref=e644]
+                  - generic [ref=e646]:
+                    - img [ref=e647]
+                    - img [ref=e649]
+                    - img [ref=e651]
+                    - img [ref=e653]
+                    - img [ref=e655]
+                  - generic [ref=e657]:
+                    - generic [ref=e658]:
+                      - paragraph [ref=e659]: ₦99,999
+                      - paragraph [ref=e660]: ₦153,845
+                    - paragraph [ref=e661]: Save ₦53,846
+              - button "Add to Cart" [ref=e663]:
+                - img [ref=e664]
+                - text: Add to Cart
+            - generic [ref=e669]:
+              - link "Infinix Hot 40 Pro 5G — 256GB, 8GB RAM Infinix Hot 40 Pro 5G — 256GB, 8GB RAM — view 2 Wishlist phones-tablets Infinix Hot 40 Pro 5G — 256GB, 8GB RAM ₦89,999" [ref=e670] [cursor=pointer]:
+                - /url: /product/cmqqt5gd8000plnjr389cz9nz
+                - generic [ref=e671]:
+                  - generic [ref=e672]:
+                    - img "Infinix Hot 40 Pro 5G — 256GB, 8GB RAM" [ref=e673]
+                    - img "Infinix Hot 40 Pro 5G — 256GB, 8GB RAM — view 2" [ref=e674]
+                  - button "Wishlist" [ref=e678]:
+                    - img [ref=e679]
+                - generic [ref=e681]:
+                  - generic [ref=e682]: phones-tablets
+                  - heading "Infinix Hot 40 Pro 5G — 256GB, 8GB RAM" [level=3] [ref=e683]
+                  - generic [ref=e685]:
+                    - img [ref=e686]
+                    - img [ref=e688]
+                    - img [ref=e690]
+                    - img [ref=e692]
+                    - img [ref=e694]
+                  - paragraph [ref=e698]: ₦89,999
+              - button "Add to Cart" [ref=e700]:
+                - img [ref=e701]
+                - text: Add to Cart
+            - generic [ref=e706]:
+              - link "Infinix Note 40 Pro 5G — 256GB, 12GB RAM Wishlist HOT DEAL -25% phones-tablets Infinix Note 40 Pro 5G — 256GB, 12GB RAM ₦149,999 ₦199,999 Save ₦50,000" [ref=e707] [cursor=pointer]:
+                - /url: /product/cmqqt5gdb000rlnjr8hyjr48f
+                - generic [ref=e708]:
+                  - img "Infinix Note 40 Pro 5G — 256GB, 12GB RAM" [ref=e709]
+                  - button "Wishlist" [ref=e710]:
+                    - img [ref=e711]
+                  - generic [ref=e713]:
+                    - generic [ref=e714]:
+                      - img [ref=e715]
+                      - text: HOT DEAL
+                    - generic [ref=e717]: "-25%"
+                - generic [ref=e718]:
+                  - generic [ref=e719]: phones-tablets
+                  - heading "Infinix Note 40 Pro 5G — 256GB, 12GB RAM" [level=3] [ref=e720]
+                  - generic [ref=e722]:
+                    - img [ref=e723]
+                    - img [ref=e725]
+                    - img [ref=e727]
+                    - img [ref=e729]
+                    - img [ref=e731]
+                  - generic [ref=e733]:
+                    - generic [ref=e734]:
+                      - paragraph [ref=e735]: ₦149,999
+                      - paragraph [ref=e736]: ₦199,999
+                    - paragraph [ref=e737]: Save ₦50,000
+              - button "Add to Cart" [ref=e739]:
+                - img [ref=e740]
+                - text: Add to Cart
+            - generic [ref=e745]:
+              - link "Tecno Camon 30 Pro 5G — 256GB, 8GB RAM Wishlist HOT DEAL -35% phones-tablets Tecno Camon 30 Pro 5G — 256GB, 8GB RAM ₦159,999 ₦246,152 Save ₦86,153" [ref=e746] [cursor=pointer]:
+                - /url: /product/cmqqt5gde000tlnjrg3byi0so
+                - generic [ref=e747]:
+                  - img "Tecno Camon 30 Pro 5G — 256GB, 8GB RAM" [ref=e748]
+                  - button "Wishlist" [ref=e749]:
+                    - img [ref=e750]
+                  - generic [ref=e752]:
+                    - generic [ref=e753]:
+                      - img [ref=e754]
+                      - text: HOT DEAL
+                    - generic [ref=e756]: "-35%"
+                - generic [ref=e757]:
+                  - generic [ref=e758]: phones-tablets
+                  - heading "Tecno Camon 30 Pro 5G — 256GB, 8GB RAM" [level=3] [ref=e759]
+                  - generic [ref=e761]:
+                    - img [ref=e762]
+                    - img [ref=e764]
+                    - img [ref=e766]
+                    - img [ref=e768]
+                    - img [ref=e770]
+                  - generic [ref=e772]:
+                    - generic [ref=e773]:
+                      - paragraph [ref=e774]: ₦159,999
+                      - paragraph [ref=e775]: ₦246,152
+                    - paragraph [ref=e776]: Save ₦86,153
+              - button "Add to Cart" [ref=e778]:
+                - img [ref=e779]
+                - text: Add to Cart
+            - generic [ref=e784]:
+              - link "Xiaomi Redmi Note 13 4G — 256GB, 8GB RAM Wishlist -20% phones-tablets Xiaomi Redmi Note 13 4G — 256GB, 8GB RAM ₦119,999 ₦149,999 Save ₦30,000" [ref=e785] [cursor=pointer]:
+                - /url: /product/cmqqt5gdi000vlnjr0n7dgz1w
+                - generic [ref=e786]:
+                  - img "Xiaomi Redmi Note 13 4G — 256GB, 8GB RAM" [ref=e787]
+                  - button "Wishlist" [ref=e788]:
+                    - img [ref=e789]
+                  - generic [ref=e792]: "-20%"
+                - generic [ref=e793]:
+                  - generic [ref=e794]: phones-tablets
+                  - heading "Xiaomi Redmi Note 13 4G — 256GB, 8GB RAM" [level=3] [ref=e795]
+                  - generic [ref=e797]:
+                    - img [ref=e798]
+                    - img [ref=e800]
+                    - img [ref=e802]
+                    - img [ref=e804]
+                    - img [ref=e806]
+                  - generic [ref=e808]:
+                    - generic [ref=e809]:
+                      - paragraph [ref=e810]: ₦119,999
+                      - paragraph [ref=e811]: ₦149,999
+                    - paragraph [ref=e812]: Save ₦30,000
+              - button "Add to Cart" [ref=e814]:
+                - img [ref=e815]
+                - text: Add to Cart
+            - generic [ref=e820]:
+              - link "Xiaomi Redmi 13C 4G — 128GB, 6GB RAM Wishlist HOT DEAL -30% phones-tablets Xiaomi Redmi 13C 4G — 128GB, 6GB RAM ₦69,999 ₦99,999 Save ₦30,000" [ref=e821] [cursor=pointer]:
+                - /url: /product/cmqqt5gdl000xlnjrhb831gik
+                - generic [ref=e822]:
+                  - img "Xiaomi Redmi 13C 4G — 128GB, 6GB RAM" [ref=e823]
+                  - button "Wishlist" [ref=e824]:
+                    - img [ref=e825]
+                  - generic [ref=e827]:
+                    - generic [ref=e828]:
+                      - img [ref=e829]
+                      - text: HOT DEAL
+                    - generic [ref=e831]: "-30%"
+                - generic [ref=e832]:
+                  - generic [ref=e833]: phones-tablets
+                  - heading "Xiaomi Redmi 13C 4G — 128GB, 6GB RAM" [level=3] [ref=e834]
+                  - generic [ref=e836]:
+                    - img [ref=e837]
+                    - img [ref=e839]
+                    - img [ref=e841]
+                    - img [ref=e843]
+                    - img [ref=e845]
+                  - generic [ref=e847]:
+                    - generic [ref=e848]:
+                      - paragraph [ref=e849]: ₦69,999
+                      - paragraph [ref=e850]: ₦99,999
+                    - paragraph [ref=e851]: Save ₦30,000
+              - button "Add to Cart" [ref=e853]:
+                - img [ref=e854]
+                - text: Add to Cart
+            - generic [ref=e859]:
+              - link "Apple iPad 10th Gen — 64GB Wi-Fi, Blue Wishlist phones-tablets Apple iPad 10th Gen — 64GB Wi-Fi, Blue ₦499,999" [ref=e860] [cursor=pointer]:
+                - /url: /product/cmqqt5gdo000zlnjrjm9k08ko
+                - generic [ref=e861]:
+                  - img "Apple iPad 10th Gen — 64GB Wi-Fi, Blue" [ref=e862]
+                  - button "Wishlist" [ref=e863]:
+                    - img [ref=e864]
+                - generic [ref=e866]:
+                  - generic [ref=e867]: phones-tablets
+                  - heading "Apple iPad 10th Gen — 64GB Wi-Fi, Blue" [level=3] [ref=e868]
+                  - generic [ref=e870]:
+                    - img [ref=e871]
+                    - img [ref=e873]
+                    - img [ref=e875]
+                    - img [ref=e877]
+                    - img [ref=e879]
+                  - paragraph [ref=e883]: ₦499,999
+              - button "Add to Cart" [ref=e885]:
+                - img [ref=e886]
+                - text: Add to Cart
+            - generic [ref=e891]:
+              - link "Apple iPad Pro 12.9\" M2 — 256GB Wi-Fi Wishlist HOT DEAL -25% phones-tablets Apple iPad Pro 12.9\" M2 — 256GB Wi-Fi ₦999,999 ₦1,333,332 Save ₦333,333" [ref=e892] [cursor=pointer]:
+                - /url: /product/cmqqt5gdr0011lnjrhp6qatuh
+                - generic [ref=e893]:
+                  - img "Apple iPad Pro 12.9\" M2 — 256GB Wi-Fi" [ref=e894]
+                  - button "Wishlist" [ref=e895]:
+                    - img [ref=e896]
+                  - generic [ref=e898]:
+                    - generic [ref=e899]:
+                      - img [ref=e900]
+                      - text: HOT DEAL
+                    - generic [ref=e902]: "-25%"
+                - generic [ref=e903]:
+                  - generic [ref=e904]: phones-tablets
+                  - heading "Apple iPad Pro 12.9\" M2 — 256GB Wi-Fi" [level=3] [ref=e905]
+                  - generic [ref=e907]:
+                    - img [ref=e908]
+                    - img [ref=e910]
+                    - img [ref=e912]
+                    - img [ref=e914]
+                    - img [ref=e916]
+                  - generic [ref=e918]:
+                    - generic [ref=e919]:
+                      - paragraph [ref=e920]: ₦999,999
+                      - paragraph [ref=e921]: ₦1,333,332
+                    - paragraph [ref=e922]: Save ₦333,333
+              - button "Add to Cart" [ref=e924]:
+                - img [ref=e925]
+                - text: Add to Cart
+            - generic [ref=e930]:
+              - link "OnePlus 12 5G — 256GB, 12GB RAM OnePlus 12 5G — 256GB, 12GB RAM — view 2 Wishlist phones-tablets OnePlus 12 5G — 256GB, 12GB RAM ₦599,999" [ref=e931] [cursor=pointer]:
+                - /url: /product/cmqqt5gdu0013lnjryiynwotb
+                - generic [ref=e932]:
+                  - generic [ref=e933]:
+                    - img "OnePlus 12 5G — 256GB, 12GB RAM" [ref=e934]
+                    - img "OnePlus 12 5G — 256GB, 12GB RAM — view 2" [ref=e935]
+                  - button "Wishlist" [ref=e939]:
+                    - img [ref=e940]
+                - generic [ref=e942]:
+                  - generic [ref=e943]: phones-tablets
+                  - heading "OnePlus 12 5G — 256GB, 12GB RAM" [level=3] [ref=e944]
+                  - generic [ref=e946]:
+                    - img [ref=e947]
+                    - img [ref=e949]
+                    - img [ref=e951]
+                    - img [ref=e953]
+                    - img [ref=e955]
+                  - paragraph [ref=e959]: ₦599,999
+              - button "Add to Cart" [ref=e961]:
+                - img [ref=e962]
+                - text: Add to Cart
+            - generic [ref=e967]:
+              - link "HP Pavilion 15 Laptop — Core i5, 8GB RAM, 512GB SSD Wishlist computing HP Pavilion 15 Laptop — Core i5, 8GB RAM, 512GB SSD ₦479,999" [ref=e968] [cursor=pointer]:
+                - /url: /product/cmqqt5ge20019lnjri2cz8jq4
+                - generic [ref=e969]:
+                  - img "HP Pavilion 15 Laptop — Core i5, 8GB RAM, 512GB SSD" [ref=e970]
+                  - button "Wishlist" [ref=e971]:
+                    - img [ref=e972]
+                - generic [ref=e974]:
+                  - generic [ref=e975]: computing
+                  - heading "HP Pavilion 15 Laptop — Core i5, 8GB RAM, 512GB SSD" [level=3] [ref=e976]
+                  - generic [ref=e978]:
+                    - img [ref=e979]
+                    - img [ref=e981]
+                    - img [ref=e983]
+                    - img [ref=e985]
+                    - img [ref=e987]
+                  - paragraph [ref=e991]: ₦479,999
+              - button "Add to Cart" [ref=e993]:
+                - img [ref=e994]
+                - text: Add to Cart
+        - generic [ref=e290]:
+          - generic [ref=e291]: 🎉 Limited Time Offer
+          - heading "Summer Sale Up to 40% Off" [level=2] [ref=e292]:
+            - text: Summer Sale
+            - text: Up to 40% Off
+          - paragraph [ref=e293]: Free shipping on all orders above ₦50,000. No code needed.
+          - link "Shop the Sale" [ref=e294] [cursor=pointer]:
+            - /url: /categories
+            - text: Shop the Sale
+            - img [ref=e295]
+    - contentinfo [ref=e297]:
+      - generic [ref=e298]:
+        - generic [ref=e299]:
+          - generic [ref=e300]:
+            - link "AnchorStore" [ref=e301] [cursor=pointer]:
+              - /url: /
+              - img "AnchorStore" [ref=e303]
+            - paragraph [ref=e304]: Your trusted destination for quality products. We bring the best shopping experience right to your doorstep.
+            - generic [ref=e305]:
+              - generic [ref=e306]:
+                - img [ref=e307]
+                - generic [ref=e310]: support@anchorstore.com
+              - link "09052083623" [ref=e311] [cursor=pointer]:
+                - /url: https://wa.me/2349052083623
+                - img [ref=e312]
+                - generic [ref=e314]: "09052083623"
+              - generic [ref=e315]:
+                - img [ref=e316]
+                - generic [ref=e319]: Lagos, Nigeria
+            - generic [ref=e320]:
+              - link "WhatsApp" [ref=e321] [cursor=pointer]:
+                - /url: https://wa.me/2349052083623
+                - img [ref=e322]
+              - link "Instagram" [ref=e324] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e325]
+              - link "X (Twitter)" [ref=e328] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e329]
+              - link "Facebook" [ref=e331] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e332]
+          - generic [ref=e334]:
+            - heading "Shop" [level=3] [ref=e335]
+            - list [ref=e336]:
+              - listitem [ref=e337]:
+                - link "All Products" [ref=e338] [cursor=pointer]:
+                  - /url: /categories
+              - listitem [ref=e339]:
+                - link "New Arrivals" [ref=e340] [cursor=pointer]:
+                  - /url: /categories
+              - listitem [ref=e341]:
+                - link "Best Sellers" [ref=e342] [cursor=pointer]:
+                  - /url: /categories
+              - listitem [ref=e343]:
+                - link "On Sale" [ref=e344] [cursor=pointer]:
+                  - /url: /categories
+          - generic [ref=e345]:
+            - heading "Support" [level=3] [ref=e346]
+            - list [ref=e347]:
+              - listitem [ref=e348]:
+                - link "Contact Us" [ref=e349] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e350]:
+                - link "FAQs" [ref=e351] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e352]:
+                - link "Shipping Info" [ref=e353] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e354]:
+                - link "Returns" [ref=e355] [cursor=pointer]:
+                  - /url: /
+          - generic [ref=e356]:
+            - heading "Company" [level=3] [ref=e357]
+            - list [ref=e358]:
+              - listitem [ref=e359]:
+                - link "About Us" [ref=e360] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e361]:
+                - link "Careers" [ref=e362] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e363]:
+                - link "Privacy Policy" [ref=e364] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e365]:
+                - link "Terms of Service" [ref=e366] [cursor=pointer]:
+                  - /url: /
+        - generic [ref=e367]:
+          - paragraph [ref=e368]: © 2026 AnchorStore. All rights reserved.
+          - generic [ref=e369]:
+            - link "WhatsApp" [ref=e370] [cursor=pointer]:
+              - /url: https://wa.me/2349052083623
+              - img [ref=e371]
+            - link "Instagram" [ref=e373] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e374]
+            - link "X (Twitter)" [ref=e377] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e378]
+            - link "Facebook" [ref=e380] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e381]
+  - button "Toggle chat assistant" [ref=e384] [cursor=pointer]:
+    - img [ref=e386]

@@ -1,0 +1,15 @@
+meta {
+  name: Update Category
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://localhost:5000/api/categories/cmqi4lfvq0000zupmgf6q6wqt
+  body: json
+  auth: inherit
+}
+
+body:json {
+  { "name": "Official Store" }
+}

@@ -1,0 +1,23 @@
+info:
+  name: Update Product
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{baseUrl}}/api/products/cmqi5yzqn0001ozqw92k3embq"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "MacBook Pro",
+        "unitPrice": 2800000,
+        "categoryId": "cmqgg3spx0000viznx5qlnzbw"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

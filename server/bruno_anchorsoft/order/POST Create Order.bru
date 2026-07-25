@@ -1,0 +1,42 @@
+meta {
+  name: POST Create Order
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:5000/api/orders
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbXFwY2VwdzQwMDAwNGJ6eDU1M3p0cDNrIiwiaWF0IjoxNzgyMTk5NDU1LCJleHAiOjE3ODIyMDMwNTV9.qS7RPk3OWwdOJYkR-4IjVHxRTI9rPXBFqDPNNqCpDo4
+}
+
+body:json {
+  {
+    "total": 50000,
+    "paymentMethod": "card",
+    "deliveryInfo": {
+      "name": "Samuel Adebayo",
+      "email": "samuel@test.com",
+      "phone": "08012345678",
+      "street": "14 Oshodi Street",
+      "city": "Lagos",
+      "state": "Lagos"
+    },
+    "cartItems": [
+      {
+        "id": "1",
+        "quantity": 2,
+        "price": 25000
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
