@@ -12,9 +12,20 @@ import orderRouter from "./router/order.js";
 import paymentRouter from "./router/payment.js";
 import adminAuthRouter from "./router/adminAuth.js";
 import reviewRouter from "./router/review.js";
+import { execSync } from "child_process";
 import errorHandler from "./middleware/errorHandler.js";
 
 config();
+
+if (process.env.NODE_ENV === "production") {
+  try {
+    console.log("Running database migrations...");
+    execSync("npx prisma migrate deploy", { stdio: "inherit" });
+    console.log("Migrations complete");
+  } catch (err) {
+    console.error("Migration failed:", err.message);
+  }
+}
 
 const app = express();
 
