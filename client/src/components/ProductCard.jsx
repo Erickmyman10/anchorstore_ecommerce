@@ -33,7 +33,7 @@ const ProductCard = ({ product }) => {
       ? product.rating?.rate
       : Number(product.rating);
   const reviewCount =
-    typeof product.rating === 'object' ? product.rating?.count : null;
+    typeof product.rating === 'object' ? product.rating?.count : (product.reviewCount ?? null);
 
   // Derive a stable integer from string CUIDs so modulo-based display logic works
   const idNum = typeof product.id === 'number'

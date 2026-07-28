@@ -177,7 +177,11 @@ const ProductDetail = () => {
           </h1>
 
           {/* Stars */}
-          <StarRating rating={product.rating?.rate} count={product.rating?.count} size="md" />
+          <StarRating
+            rating={typeof product.rating === 'object' ? product.rating?.rate : product.rating}
+            count={typeof product.rating === 'object' ? product.rating?.count : product.reviewCount}
+            size="md"
+          />
 
           {/* ── Urgency bar ── */}
           {showUrgency && (
